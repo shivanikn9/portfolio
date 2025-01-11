@@ -159,10 +159,19 @@
 
 						// Create an array of typing text
 						const typingTexts = [
-						'BCA Graduate  ',
-						'Programmer   ',
-						'Intern   ',
-						];
+						'BCA Graduate',
+						'Programmer',
+						'Junior Engineer',
+						'Python Developer',
+						'AI Enthusiast',
+						'Web Developer',
+						'Microcontroller Programmer',
+						'CEO of సారిమహల్.com',
+						'CEO of सारीमहल.भारत',
+						'Innovative Problem Solver'
+					];
+
+
 
 						// Create a function to display the typing animation for a given text
 						function playTypingAnimation(text) {
@@ -187,10 +196,10 @@
 
 						<br>
 						<br>
-			            <h2>A Full Stack Developer with Embedded Systems Focus</h2>
+			            <h2>Microcontroller Programmer | AI & Python Developer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <!--<p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> -->
+			            <p><a href="https://https://www.linkedin.com/in/nithin-v-s32" class="btn btn-primary py-3 px-4">LinkedIn</a> 
 							<a href="https://github.com/nithinvs32" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
@@ -220,8 +229,25 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Nithin V S</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Full Stack Developer with Embedded Systems </span></p>
-										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Developer | Embedded Systems Developer | CEO & Innovator</span></p>
+										<p><span class="title-s">Experience: </span> <span id="experience"></span> months</p>
+
+										<script>
+											// Your start date in the format "YYYY-MM-DD"
+											const startDate = new Date("2024-07-18"); // Replace with your actual start date
+											const currentDate = new Date();
+										
+											// Calculate the difference in months
+											let monthsExperience = (currentDate.getFullYear() - startDate.getFullYear()) * 12;
+											monthsExperience += currentDate.getMonth() - startDate.getMonth();
+										
+											// Ensure it doesn't show negative values
+											monthsExperience = Math.max(0, monthsExperience);
+										
+											// Update the experience span
+											document.getElementById("experience").textContent = monthsExperience;
+										</script>
+										
 										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
 									  </div>
 									</div>
@@ -269,21 +295,21 @@
 								
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
-								
-								<p>With a BCA degree and a fervent enthusiasm for technology and programming, I am equipped with a robust skill set in Python, JavaScript, C, C++, HTML, CSS, WordPress, and MySQL. Proficient in web-based software engineering, microcontroller programming, and display interfaces, I have a proven track record in developing and maintaining web applications. I excel in problem-solving, teamwork, and adaptability, 
-									and am dedicated to contributing to the growth of a reputed company through my technical expertise and hands-on experience..</p>
+								<p>With a BCA degree and a fervent enthusiasm for technology and programming, I am equipped with a robust skill set in Python, JavaScript, C, C++, HTML, CSS, WordPress, and MySQL. Proficient in web-based software engineering, microcontroller programming, and display interfaces, I have a proven track record in developing and maintaining web applications. I excel in problem-solving, teamwork, and adaptability, and am dedicated to contributing to the growth of Ka-naada Pvt. Ltd. through my technical expertise and hands-on experience.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Web Development&amp; Software Engineering</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Web Applications, Microcontroller Programming &amp;  Display Interfaces</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Applications, Nagarjuna College of Management Studies (2023)</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Telugu, Kannada</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Programming Languages: Python, JavaScript, C, C++ , Web Development: HTML, CSS, WordPress &amp; Database Management: MySQL</span></li>
-									<li class="d-flex"><span>Internships Experience:</span>
-										<ul>
-											<li>Web Application Development and Maintenance Intern at Cre'active'</li>
-											<li>Developer of Software and Hardware Systems Intern at Ka-anada PVT</li>
-										</ul>
-									</li>
+								    <li class="d-flex"><span>Profile:</span> <span>Web Development & Software Engineering</span></li>
+								    <li class="d-flex"><span>Domain:</span> <span>Web Applications, Microcontroller Programming & Display Interfaces</span></li>
+								    <li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Applications, Nagarjuna College of Management Studies (2023)</span></li>
+								    <li class="d-flex"><span>Language:</span> <span>English, Hindi, Telugu, Kannada</span></li>
+								    <li class="d-flex"><span>Other Skills:</span> <span>Programming Microcontrollers: Python, C, C++ | AI and Machine Learning | Robotics Development | Web Development: HTML, CSS, WordPress | Database Management: MySQL</span></li>
+								    <li class="d-flex"><span>Internships Experience:</span>
+								        <ul>
+								            <li>Web Application Development and Maintenance Intern at Cre'active'</li>
+								            <li>Software and Hardware Systems Intern at Ka-naada Pvt. Ltd. (Currently working here)</li>
+								        </ul>
+								    </li>
+								</ul>
+
 									<li class="d-flex"><span>Interest:</span> <span>Solving Puzzles, Watching Action Movies, Playing Mobile Games</span></li>
 								
 									
@@ -330,13 +356,17 @@
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2024-Present</span>
-						<h2>Full Stack Developer with Embedded Systems Focus</h2>
-						<span class="position">Developer</span>
-						<p class="mt-4">Developer, Ka-Nnada Pvt Ltd is a startup company specializing in the production of keyboards for all regional languages of India.. 
+						<h2>Software and Hardware Junior Engineer at Ka-naada Phonetics Pvt. Ltd.</h2>
+						<span class="position">Web & App Developer | Microcontroller Programmer</span>
+						<p class="mt-4">Software and Hardware Junior Engineer at Ka-naada Phonetics Pvt. Ltd., a startup specializing in keyboards for all regional languages of India. 
 							<ul>
-								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
+								<li>Developing Python applications and AI-driven solutions for innovative hardware and software projects.</li>
+								<li>Programming microcontrollers, including Raspberry Pi 5, for regional language keyboards and OpenCV-based projects.</li>
+								<li>Leading as CEO and spearheading web development for multilingual e-commerce platforms like <a href="https://xn--ppcdhvh1ai9i.com/" target="_blank">సారిమహల్.com</a> and <a href="https://xn--r2bdhvh1ap.xn--h2brj9c/" target="_blank">सारीमहल.भारत</a></li>
+							</a></li>
+							<li>Worked on programming microcontrollers and display interfaces (OLED, TFT) with Pico-python using the Pico Pi microcontroller.</li>
+							<li>Volunteered to teach and run the language lab at Rajanukunte, facilitating learning for students.</li>
+							
 							</ul>
 						</p>
 					</div>
@@ -346,7 +376,7 @@
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2021-2022</span>
 						<h2>Web Developer</h2>
-						<span class="position">Developer</span>
+						<span class="position">Web Interface Developer</span>
 						<p class="mt-4">
 							<ul>
 								<li>Web Application Development and Maintenance Intern at Cre'active'
@@ -355,14 +385,7 @@
 										<li>Assisted in web application development projects, enhancing user interface and functionality.</li>
 										<li>Collaborated with team members to troubleshoot and resolve technical issues.</li>
 									</ul>
-								</li>
-									<ul>
-										<li>Worked on programming microcontrollers and display interfaces (OLED, TFT) with Pico-python.</li>
-										<li>Volunteered to teach and run the language lab at Rajanukunte, facilitating learning for students.</li>
-									<ul>	</ul>
-									</ul>
 
-								</li>
 							</ul>
 						</p>
 					</div>
@@ -409,12 +432,12 @@
 		</div>
 		
 
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
+		<div class="row justify-content-center mt-5" id="cvSection">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/uc?export=download&id=1Q8EhefurFcARvgapzNPQI9o9QaTHF1yP" class="btn btn-primary py-4 px-5" download>Download CV</a></p>
+			</div>
+		</div>
+		
     </section>
 
    
@@ -576,7 +599,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+				  <p><a href="#cvSection">Download My Resume</a></p>
 	          </div>
           </div>
 
@@ -585,9 +608,12 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="#" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> 
+						<a href="https://forms.gle/XCBs31MCTziCGQAG7" class="btn btn-primary py-3 px-5" target="_blank">Click Here</a>
+					</h2>
 				</div>
 			</div>
+			
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 					  <li class="ftco-animate normal-txt">Find me on  </li>
