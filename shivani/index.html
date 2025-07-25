@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani K.N - UI/UX Designer</title>
+    <meta name="description" content="Shivani K.N - Passionate UI/UX Designer and Graphic Designer creating intuitive, user-centered digital experiences">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/fi323asset-11600-1.png" alt="Shivani Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+            </ul>
+            <div class="social-icons-top">
+                <a href="https://www.behance.net/yourprofile" target="_blank" title="Behance">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="margin-right:8px;">
+                    <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                    <text x="10" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">Be</text>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                    <text x="12" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">in</text>
+                  </svg>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-blur-left"></div>
+        
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="welcome-section">
+                    <img src="assets/line-1.svg" alt="Line" class="welcome-line">
+                    <span class="welcome-text">Welcome To</span>
+                </div>
+                
+                <div class="hero-text">
+                    <h2 class="hello-text">Hello, I'm</h2>
+                    <h1 class="name-text">Shivani. K.N</h1>
+                    <p class="role-text">UI/UX Designer And Graphic Designer</p>
+                </div>
+                
+                <button class="btn-primary" onclick="scrollToContact()">Get Connected</button>
+            </div>
+            
+            <div class="hero-right">
+                <div class="profile-container">
+                    <div class="profile-shadow"></div>
+                    <div class="profile-border"></div>
+                    <img src="assets/whatsapp-image-2025-03-09-at-22-32-36-1.png" alt="Shivani Profile" class="profile-img">
+                    <img src="assets/download--17-.png" alt="Decorative" class="decor-left">
+                    <img src="assets/download--17--1.png" alt="Decorative" class="decor-right">
+                </div>
+            </div>
+            
+            <div class="follow-section">
+                <div class="follow-text-container">
+                    <span class="follow-text">FOLLOW ME ON</span>
+                    <img src="assets/arrow-1.svg" alt="Arrow" class="follow-arrow">
+                </div>
+                <div class="social-follow-vertical">
+                  <a href="https://www.behance.net/yourprofile" target="_blank" title="Behance">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                      <text x="10" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">Be</text>
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                      <text x="12" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">in</text>
+                    </svg>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-blur"></div>
+        <div class="about-content">
+            <div class="about-left">
+                <img src="assets/vector-1-1.svg" alt="Vector Background" class="vector-bg">
+                <div class="about-profile">
+                    <div class="about-profile-shadow"></div>
+                    <div class="about-profile-border"></div>
+                    <img src="assets/whatsapp-image-2025-03-09-at-22-32-36-2.png" alt="Shivani About" class="about-profile-img">
+                </div>
+            </div>
+            
+            <div class="about-right">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-text">
+                    My name is Shivani K.N.<br>
+                    A passionate UI/UX designer who loves<br>
+                    crafting intuitive, user-centered digital<br>
+                    experiences. With a keen eye for design<br>
+                    and a problem-solving mindset.<br>
+                    I specialize in turning complex ideas into<br>
+                    simple, beautiful, and functional interfaces.
+                </p>
+                <button class="btn-primary" onclick="showMoreAbout()">See More About Me</button>
+            </div>
+        </div>
+        
+        <!-- Services Section -->
+        <div id="services" class="services">
+            <div class="services-header">
+                <h3 class="services-subtitle">My Services</h3>
+                <h2 class="services-title">What I Do</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="assets/ux--1--1.png" alt="UI/UX Designer" class="service-icon">
+                    <h3 class="service-title">UI/UX Designer</h3>
+                    <p class="service-desc">A UI/UX designer focuses on creating user-friendly and visually appealing digital interfaces that enhance the overall user experience. They combine research, design principles, and user feedback to build intuitive websites and apps.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="assets/designer-1.png" alt="Graphic Designer" class="service-icon">
+                    <h3 class="service-title">Graphic Designer</h3>
+                    <p class="service-desc">A graphic designer creates visual content to communicate messages through typography, imagery, color, and layout. They design for a variety of platforms—such as print, digital, and social media—to help brands effectively convey their identity and connect with their audience.</p>
+                </div>
+                
+                <div class="service-card">
+                    <img src="assets/front-end-programming--1--1.png" alt="Web Designer" class="service-icon">
+                    <h3 class="service-title">Web Designer</h3>
+                    <p class="service-desc">A web designer creates visually appealing and user-friendly websites that effectively communicate a brand's message. They focus on layout, color, typography, and interactive elements to ensure an engaging experience across all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-blur-left"></div>
+        <div class="portfolio-blur-right"></div>
+        
+        <h2 class="portfolio-title">Portfolio</h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item portfolio-item-1">
+                <a href="#" class="portfolio-link" data-project="1" onclick="openPortfolioItem(1, event)">
+                    <img src="assets/rectangle-1060.png" alt="Portfolio Project 1">
+                    <div class="portfolio-overlay">
+                        <span>View Project</span>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item portfolio-item-2">
+                <a href="#" class="portfolio-link" data-project="2" onclick="openPortfolioItem(2, event)">
+                    <img src="assets/rectangle-1061.png" alt="Portfolio Project 2">
+                    <div class="portfolio-overlay">
+                        <span>View Project</span>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item portfolio-item-3">
+                <a href="#" class="portfolio-link" data-project="3" onclick="openPortfolioItem(3, event)">
+                    <img src="assets/rectangle-1062.png" alt="Portfolio Project 3">
+                    <div class="portfolio-overlay">
+                        <span>View Project</span>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item portfolio-item-4">
+                <a href="#" class="portfolio-link" data-project="4" onclick="openPortfolioItem(4, event)">
+                    <img src="assets/rectangle-1063.png" alt="Portfolio Project 4">
+                    <div class="portfolio-overlay">
+                        <span>View Project</span>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item portfolio-item-5">
+                <a href="#" class="portfolio-link" data-project="5" onclick="openPortfolioItem(5, event)">
+                    <img src="assets/rectangle-1064.png" alt="Portfolio Project 5">
+                    <div class="portfolio-overlay">
+                        <span>View Project</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="portfolio-button">
+            <button class="btn-primary" onclick="showMorePortfolio()">See More</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-cta">
+            <h2 class="contact-title">Ready when you are—let the questions roll</h2>
+            <button class="btn-primary" onclick="openContactForm()">Contact</button>
+        </div>
+        
+        <div class="contact-separator"></div>
+        
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="assets/vector-1.svg" alt="Phone" class="contact-icon">
+                        <span class="contact-text">8217613838</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/vector.svg" alt="Email" class="contact-icon">
+                        <span class="contact-text">Shivanikn9@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <h3 class="footer-title">Follow Me</h3>
+                <div class="footer-socials">
+                    <a href="https://www.behance.net/yourprofile" target="_blank" title="Behance">
+                      <svg width="32" height="32" viewBox="0 0 40 40" fill="none" style="margin-right:8px;">
+                        <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                        <text x="8" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">Be</text>
+                      </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="20" fill="#1877F2"/>
+                        <text x="10" y="25" font-size="16" font-family="Arial" fill="black" font-weight="bold">in</text>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-link" onclick="openSocial('dribbble')">Dribbble</a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content portfolio-modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="portfolio-modal-header">
+                <h3 id="portfolioTitle">Portfolio Project</h3>
+                <div class="portfolio-links">
+                    <a href="#" id="figmaLink" target="_blank" class="portfolio-external-link">View in Figma</a>
+                    <a href="#" id="liveLink" target="_blank" class="portfolio-external-link">Live Demo</a>
+                </div>
+            </div>
+            <img id="modalImage" src="" alt="Portfolio Item">
+            <div class="portfolio-description">
+                <p id="portfolioDescription">Project description will appear here.</p>
+            </div>
+            <div class="modal-nav">
+                <button onclick="prevPortfolioItem()">&lt; Previous</button>
+                <button onclick="nextPortfolioItem()">Next &gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content contact-form-modal">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm" onsubmit="submitContactForm(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
