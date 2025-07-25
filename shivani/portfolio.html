@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Shivani K.N | UI/UX Design Projects</title>
+    <meta name="description" content="View Shivani K.N's portfolio of UI/UX design projects including web applications, mobile apps, and digital experiences.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/fi323asset-11600-1.png" alt="Shivani Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Page Content -->
+    <section class="portfolio-page">
+        <div class="portfolio-page-content">
+            <div class="portfolio-hero">
+                <h1 class="portfolio-page-title">My Portfolio</h1>
+                <p class="portfolio-page-subtitle">A collection of my recent UI/UX design projects</p>
+            </div>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+            </div>
+
+            <div class="portfolio-expanded-grid">
+                <div class="portfolio-expanded-item" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="1" onclick="openPortfolioItem(1, event)">
+                        <img src="assets/rectangle-1060.png" alt="E-Commerce Platform Design">
+                        <div class="portfolio-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-item-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Modern shopping experience with intuitive interface</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-expanded-item" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="2" onclick="openPortfolioItem(2, event)">
+                        <img src="assets/rectangle-1061.png" alt="Mobile Banking App">
+                        <div class="portfolio-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-item-info">
+                        <h3>Mobile Banking App</h3>
+                        <p>Secure and user-friendly banking experience</p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Banking</span>
+                            <span class="tag">FinTech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-expanded-item" data-category="dashboard">
+                    <a href="#" class="portfolio-link" data-project="3" onclick="openPortfolioItem(3, event)">
+                        <img src="assets/rectangle-1062.png" alt="Food Delivery Dashboard">
+                        <div class="portfolio-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-item-info">
+                        <h3>Food Delivery Dashboard</h3>
+                        <p>Admin dashboard with real-time tracking</p>
+                        <div class="project-tags">
+                            <span class="tag">Dashboard</span>
+                            <span class="tag">Food Tech</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-expanded-item" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="4" onclick="openPortfolioItem(4, event)">
+                        <img src="assets/rectangle-1063.png" alt="Healthcare Management System">
+                        <div class="portfolio-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-item-info">
+                        <h3>Healthcare Management</h3>
+                        <p>Patient and doctor management platform</p>
+                        <div class="project-tags">
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Web App</span>
+                            <span class="tag">Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-expanded-item" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="5" onclick="openPortfolioItem(5, event)">
+                        <img src="assets/rectangle-1064.png" alt="Learning Management Platform">
+                        <div class="portfolio-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </a>
+                    <div class="portfolio-item-info">
+                        <h3>Learning Management Platform</h3>
+                        <p>Educational platform for students and educators</p>
+                        <div class="project-tags">
+                            <span class="tag">Education</span>
+                            <span class="tag">LMS</span>
+                            <span class="tag">E-learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content portfolio-modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="portfolio-modal-header">
+                <h3 id="portfolioTitle">Portfolio Project</h3>
+                <div class="portfolio-links">
+                    <a href="#" id="figmaLink" target="_blank" class="portfolio-external-link">View in Figma</a>
+                    <a href="#" id="liveLink" target="_blank" class="portfolio-external-link">Live Demo</a>
+                </div>
+            </div>
+            <img id="modalImage" src="" alt="Portfolio Item">
+            <div class="portfolio-description">
+                <p id="portfolioDescription">Project description will appear here.</p>
+            </div>
+            <div class="modal-nav">
+                <button onclick="prevPortfolioItem()">&lt; Previous</button>
+                <button onclick="nextPortfolioItem()">Next &gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

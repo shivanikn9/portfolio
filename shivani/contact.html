@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shivani K.N | Get in Touch</title>
+    <meta name="description" content="Contact Shivani K.N for UI/UX design projects. Get in touch for collaborations, consultations, or design inquiries.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/fi323asset-11600-1.png" alt="Shivani Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Page Content -->
+    <section class="contact-page">
+        <div class="contact-page-content">
+            <div class="contact-hero">
+                <h1 class="contact-page-title">Let's Work Together</h1>
+                <p class="contact-page-subtitle">Ready to bring your ideas to life? Get in touch!</p>
+            </div>
+
+            <div class="contact-content-grid">
+                <div class="contact-info-section">
+                    <h2>Get in Touch</h2>
+                    <p>I'm always excited to work on new projects and collaborate with amazing people. Whether you have a project in mind or just want to say hello, feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>Email</h4>
+                            <p class="contact-text">shivanikn.design@gmail.com</p>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <h4>Phone</h4>
+                            <p class="contact-text">+91 9876543210</p>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <h4>Location</h4>
+                            <p class="contact-text">Bangalore, India</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links-contact">
+                        <h4>Follow Me</h4>
+                        <div class="social-icons">
+                            <a href="#" onclick="openSocial('linkedin')" class="social-link">LinkedIn</a>
+                            <a href="#" onclick="openSocial('behance')" class="social-link">Behance</a>
+                            <a href="#" onclick="openSocial('dribbble')" class="social-link">Dribbble</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <form id="contactForm" class="contact-form" onsubmit="submitContactForm(event)">
+                        <h3>Send a Message</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-cta-section">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how I can help bring your vision to life through thoughtful design.</p>
+                <button class="btn-primary" onclick="document.getElementById('name').focus()">Start a Conversation</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
