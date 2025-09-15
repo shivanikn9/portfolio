@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Nurture - Case Study</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: rgba(255,255,255,1);
+            overflow-x: hidden;
+        }
+        
+        /* Original Image Backgrounds */
+        .bg-image-5 {
+            width: 668px;
+            height: 100%;
+            background: url("./images/v0_5.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 0.45;
+            position: absolute;
+            top: 200px;
+            right: -100px;
+            z-index: -1;
+        }
+        
+        .bg-image-15 {
+            width: 611px;
+            height: 568px;
+            background: url("./images/v0_15.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 15px;
+        }
+        
+        .bg-image-16 {
+            width: 615px;
+            height: 615px;
+            background: url("./images/v0_16.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 15px;
+        }
+        
+        .bg-image-188 {
+            width: 100px;
+            height: 100px;
+            background: url("./images/v0_188.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        
+        .user-flow-screens {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .screen-image {
+            width: 100%;
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .screen-1 { background-image: url("./images/v0_17.png"); }
+        .screen-2 { background-image: url("./images/v0_18.png"); }
+        .screen-3 { background-image: url("./images/v0_473.png"); }
+        .screen-4 { background-image: url("./images/v0_474.png"); }
+        .screen-5 { background-image: url("./images/v0_475.png"); }
+        .screen-6 { background-image: url("./images/v0_476.png"); }
+        
+        .empathy-map-image {
+            width: 100%;
+            height: 400px;
+            background: url("./images/v0_433.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+        
+        .user-persona-image {
+            width: 100%;
+            height: 500px;
+            background: url("./images/v0_134.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 20px 20px 20px; /* Add top padding for fixed header */
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("./images/v0_5.png") no-repeat;
+            background-position: right center;
+            background-size: 400px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        /* Navigation - Fixed Header */
+        .nav-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            gap: 30px;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(5, 78, 22, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #054E16;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 2px solid transparent;
+        }
+        
+        .nav-item:hover {
+            background: #f0f8f0;
+            transform: translateY(-2px);
+            border-color: #4E6C50;
+            box-shadow: 0 5px 15px rgba(5, 78, 22, 0.2);
+        }
+        
+        .nav-item.active {
+            background: #054E16;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Home Button */
+        .home-button {
+            position: fixed;
+            top: 80px; /* Position below fixed header */
+            left: 20px;
+            background: linear-gradient(135deg, #054E16 0%, #4E6C50 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(5, 78, 22, 0.3);
+            transition: all 0.3s ease;
+            z-index: 998;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(5, 78, 22, 0.4);
+            background: linear-gradient(135deg, #4E6C50 0%, #054E16 100%);
+        }
+        
+        .home-button::before {
+            content: '🏠 ';
+            margin-right: 5px;
+        }
+        
+        .main-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: transparent;
+            background: linear-gradient(135deg, 
+                #69abdb 0%, 
+                #4a90e2 25%, 
+                #8c52ff 50%, 
+                #ff6b6b 75%, 
+                #69abdb 100%
+            );
+            background-size: 400% 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 60px 0 40px 0;
+            text-shadow: 0 0 30px rgba(105, 171, 219, 0.5);
+            cursor: none;
+            transition: all 0.3s ease;
+            animation: gradient-shift 8s ease-in-out infinite;
+        }
+        
+        /* Logo Section */
+        .logo-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .logo-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #054E16;
+            margin-bottom: 20px;
+        }
+        
+        .logo-description {
+            font-family: 'Alegreya', serif;
+            font-size: 18px;
+            color: #4E6C50;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin: 40px 0;
+            padding: 60px 40px;
+            background: #f9f9f9;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Fix overlapping images */
+        .bg-image-15, .bg-image-16 {
+            position: relative;
+            z-index: 0;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .bg-image-15 {
+            width: 100%;
+            max-width: 611px;
+            height: 400px;
+        }
+        
+        .bg-image-16 {
+            width: 100%;
+            max-width: 615px;
+            height: 400px;
+        }
+        
+        .section-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: transparent;
+            background: linear-gradient(135deg, 
+                #054E16 0%, 
+                #4E6C50 25%, 
+                #69abdb 50%, 
+                #4a90e2 75%, 
+                #054E16 100%
+            );
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            text-align: center;
+            cursor: none;
+            transition: all 0.3s ease;
+            animation: gradient-shift 6s ease-in-out infinite;
+        }
+        
+        .section-subtitle {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #4E6C50;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        /* Description Text - Fix overlapping */
+        .description-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin: 30px 0;
+            text-align: justify;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Problem/Solution Grid */
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .problem-card, .solution-card {
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .problem-card {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+        }
+        
+        .solution-card {
+            background: linear-gradient(135deg, #4cd137 0%, #44bd32 100%);
+            color: white;
+        }
+        
+        .card-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* Research Process Grid */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .research-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .research-item:hover {
+            transform: translateY(-5px);
+            border-color: #4E6C50;
+        }
+        
+        .research-title {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #054E16;
+            margin-bottom: 15px;
+        }
+        
+        /* User Persona */
+        .persona-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+            border-left: 6px solid #054E16;
+        }
+        
+        .persona-name {
+            font-family: 'Alegreya SC', serif;
+            font-size: 28px;
+            color: #054E16;
+            margin-bottom: 15px;
+        }
+        
+        .persona-details {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        /* Style Guide */
+        .style-guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 60px 0;
+        }
+        
+        .color-palette {
+            text-align: center;
+        }
+        
+        .color-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .primary { background: #054E16; }
+        .secondary { background: #FEFBE5; color: #333; }
+        .tertiary { background: #4E6C50; }
+        .dark { background: #493628; }
+        
+        /* Thank You */
+        .thank-you {
+            text-align: center;
+            margin: 100px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, #054E16 0%, #4E6C50 100%);
+            color: white;
+            border-radius: 20px;
+        }
+        
+        .thank-you-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 48px;
+            font-weight: 700;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .problem-solution-grid,
+            .style-guide-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 36px;
+            }
+            
+            .container {
+                padding: 100px 15px 15px 15px; /* Increased top padding for mobile */
+            }
+            
+            .home-button {
+                top: 70px; /* Adjust for mobile header */
+                left: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            
+            .nav-section {
+                gap: 15px;
+                padding: 10px 15px;
+            }
+            
+            .nav-item {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            
+            .bg-image-15, .bg-image-16 {
+                height: 300px;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+            cursor: none; /* Hide default cursor for custom cursor */
+        }
+        
+        /* Custom Cursor */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(105, 171, 219, 0.8) 0%, rgba(105, 171, 219, 0.3) 70%, transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        .custom-cursor-trail {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background: rgba(105, 171, 219, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+        }
+        
+        /* Mouse Following Splash Animation */
+        .splash-effect {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9997;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, 
+                rgba(105, 171, 219, 0.4) 0%, 
+                rgba(138, 82, 255, 0.3) 25%,
+                rgba(255, 107, 107, 0.2) 50%,
+                rgba(74, 144, 226, 0.1) 75%,
+                transparent 100%
+            );
+            animation: splash-ripple 0.6s ease-out forwards;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes splash-ripple {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+        
+        /* Enhanced Mouse Following Gradient for Text */
+        .mouse-gradient {
+            background: linear-gradient(135deg, 
+                #69abdb 0%, 
+                #4a90e2 25%, 
+                #8c52ff 50%, 
+                #ff6b6b 75%, 
+                #69abdb 100%
+            );
+            background-size: 400% 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+            cursor: none;
+        }
+        
+        /* Interactive Elements Glow */
+        .interactive-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .interactive-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, 
+                rgba(105, 171, 219, 0.1) 0%, 
+                transparent 50%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .interactive-glow:hover::before {
+            opacity: 1;
+        }
+        
+        /* Gradient Shift Animation */
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            25% {
+                background-position: 100% 25%;
+            }
+            50% {
+                background-position: 50% 100%;
+            }
+            75% {
+                background-position: 25% 0%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        /* Enhanced Content Sections */
+        .content-section {
+            margin: 40px 0;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, 
+                rgba(249, 249, 249, 0.95) 0%, 
+                rgba(255, 255, 255, 0.98) 100%
+            );
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(105, 171, 219, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(105, 171, 219, 0.15);
+            border-color: rgba(105, 171, 219, 0.3);
+        }
+        
+        /* Scroll padding for fixed header compensation */
+        section {
+            scroll-margin-top: 120px; /* Increased to account for fixed header */
+        }
+        
+        /* Logo section adjustments */
+        .logo-section {
+            text-align: center;
+            margin: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .bg-image-188 {
+            width: 100px;
+            height: 100px;
+            background: url("./images/v0_188.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Button -->
+    <a href="../index.html" class="home-button">Home</a>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-section">
+            <span class="nav-item" onclick="scrollToSection('overview')">Project Overview</span>
+            <span class="nav-item" onclick="scrollToSection('research')">Research</span>
+            <span class="nav-item" onclick="scrollToSection('empathy')">Empathy Mapping</span>
+            <span class="nav-item" onclick="scrollToSection('persona')">User Persona</span>
+            <span class="nav-item" onclick="scrollToSection('style-guide')">Style Guide</span>
+        </nav>
+
+        <!-- Main Title and Logo -->
+        <div id="overview" class="logo-section">
+            <div class="bg-image-188"></div>
+            <h1 class="main-title">Self Nurture</h1>
+            <p class="logo-description">
+                Self-nurture refers to the practices, habits, and activities that individuals engage in to care for their emotional, mental, and sometimes physical well-being
+            </p>
+        </div>
+
+        <!-- Project Overview with Images -->
+        <section class="content-section">
+            <div class="bg-image-15"></div>
+            <p class="description-text">
+                Life can be overwhelming, and we all need support sometimes. That's why we created Self Nurture— a mental health app designed to help you navigate stress, anxiety, depression, burnout, and loneliness in a way that feels natural and supportive. We believe mental well-being should be accessible to everyone, so we've made it easy for you to track your mood, explore guided exercises, and connect with a like-minded community—all at your own pace. Whether you're looking for simple self-care tips or deeper emotional support, Self Nurture is here to remind you that you're not alone. Your mental health matters, and we're here to help you take care of it, one step at a time.
+            </p>
+            
+            <div class="bg-image-16"></div>
+            <p class="description-text">
+                The app offers a holistic approach by integrating self-care tools and professional resources, while emphasizing inclusivity for underserved groups like transgender individuals. By utilizing insights from user surveys, the app delivers personalized recommendations, empowering users to manage stress, anxiety, depression, sleep issues, and more.
+            </p>
+        </section>
+
+        <!-- Problem & Solution -->
+        <div class="problem-solution-grid">
+            <div class="problem-card">
+                <h3 class="card-title">Problem Statement</h3>
+                <p>Mental health issues are increasingly prevalent, yet individuals face significant barriers such as accessibility, stigma, and a lack of personalized care. Existing mental health solutions often fail to address the specific needs of diverse demographics, leaving gaps in support, particularly for underserved groups like transgender individuals or those struggling with interconnected issues like fitness and mental health.</p>
+            </div>
+            <div class="solution-card">
+                <h3 class="card-title">Solution Statement</h3>
+                <p>The app offers a holistic approach by integrating self-care tools and professional resources, emphasizing inclusivity for underserved groups like transgender individuals. By utilizing insights from user surveys, the app delivers personalized recommendations, empowering users to manage stress, anxiety, depression, sleep issues, and more.</p>
+            </div>
+        </div>
+
+        <!-- Research Process -->
+        <section id="research" class="content-section">
+            <h2 class="section-title">Research</h2>
+            <h3 class="section-subtitle">ui/ ux research</h3>
+            <h3 class="section-subtitle">user testing</h3>
+            
+            <div class="research-grid">
+                <div class="research-item">
+                    <h4 class="research-title">Introduction</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">UX persona & user feedback</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Competitor Analysis</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">User stories & user flow</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Create Project Plan</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Moodboard & concept</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Design Team Organization</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">AB test</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Interviews</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">User review</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Style guide & app interface</h4>
+                </div>
+                <div class="research-item">
+                    <h4 class="research-title">Final design</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scope of Work -->
+        <section class="content-section">
+            <h2 class="section-title">scope of work</h2>
+            <div class="description-text">
+                <p>Business Analysis</p>
+                <p>User Testing</p>
+                <p>User Interviews</p>
+                <p>Create Style Guide</p>
+                <p>User Research</p>
+                <p>Business Analysis</p>
+            </div>
+        </section>
+
+        <!-- Research Objectives -->
+        <section class="content-section">
+            <h3 class="card-title">Objective</h3>
+            <div class="description-text">
+                <p>Understand User Needs: Identify prevalent mental health issues and coping strategies among users.</p>
+                <p>Examine how users interact with mental health resources and their expectations from a digital app.</p>
+                <p>Confirm that app features meet genuine user needs through data insights.</p>
+                <p>Assess current mental health apps to uncover unmet needs and improvement areas.</p>
+            </div>
+        </section>
+
+        <!-- Research Questions -->
+        <section class="content-section">
+            <h3 class="card-title">Research Question</h3>
+            <div class="description-text">
+                <p>Understand the thoughts and actions of depressed people</p>
+                <p>Better understanding of user needs</p>
+                <p>The pain points users are facing</p>
+                <p>Understand how users are overcoming difficulties</p>
+                <br>
+                <p>Introduce about yourself</p>
+                <p>What's your mood lately?How long has this been going on?</p>
+                <p>what makes your mood change?</p>
+                <p>How do you solve it?</p>
+                <p>When you feel stressed,What do you usually do?</p>
+                <p>What do you think will make you better?</p>
+                <p>Have you ever been to a psychiatrist?</p>
+                <p>Do you think you need outside support?Specially what it is</p>
+            </div>
+        </section>
+
+        <!-- Empathy Mapping & User Flow -->
+        <section id="empathy" class="content-section">
+            <h2 class="section-title">Empathy Mapping</h2>
+            <div class="empathy-map-image"></div>
+            
+            <h2 class="section-title">User Flow</h2>
+            
+            <div class="description-text">
+                <h4>Say:</h4>
+                <p>Goal setting and tracking</p>
+                <p>Self-assessment tools</p>
+                <p>Guided meditation and mindfulness sessions</p>
+                <p>Daily mood tracker</p>
+                <p>Exercise and fitness suggestions</p>
+                <p>Sleep tracking and tips</p>
+                <p>Chat support with mental health professionals</p>
+                <p>Access to virtual support groups</p>
+                
+                <h4>Does:</h4>
+                <p>Talking to friends/family</p>
+                <p>Engaging in hobbies</p>
+                <p>Exercise or physical activity</p>
+                <p>Listening to music or podcasts for relaxation</p>
+                <p>Spending time in nature or taking a walk outside</p>
+                <p>Seeking professional help (therapy or counseling)</p>
+                <p>Meditation or mindfulness</p>
+                
+                <h4>Feel:</h4>
+                <p>Stress</p>
+                <p>Anxiety</p>
+                <p>Sleep problems</p>
+                <p>Loneliness</p>
+                <p>Panic attacks</p>
+                
+                <h4>Think:</h4>
+                <p>"Why do I feel so overwhelmed? Am I the only one struggling like this?"</p>
+                <p>"If I could just get a full night's sleep, maybe things would feel better. Why can't I relax at night?"</p>
+                <p>"Does anyone understand what I'm going through? How do I connect with others who feel this way?"</p>
+                <p>"Is there something wrong with me? Will this feeling ever go away?"</p>
+                <p>"How do I navigate this world and feel accepted? Will I ever find peace with who I am?"</p>
+            </div>
+            
+            <h3 class="section-subtitle">Installation from app store</h3>
+            
+            <!-- App Screens -->
+            <div class="user-flow-screens">
+                <div class="screen-image screen-1"></div>
+                <div class="screen-image screen-2"></div>
+                <div class="screen-image screen-3"></div>
+                <div class="screen-image screen-4"></div>
+                <div class="screen-image screen-5"></div>
+                <div class="screen-image screen-6"></div>
+            </div>
+            
+            <div class="description-text">
+                <p>Splash Screen → Onboarding → Sign in → Sign up → Questions → Home → Sleep → Sleep Quality Tracker → Anxiety → Logo → Favourite → Profile Settings → App Settings → Expression Analysis → Sleep Meditations → Onboarding → Music → Mood Tracker → For Beginners → Home → Mental health Assessments → Sleep Meditations → Stress → Details of Doctor → Questioners → Music → LGBTQIA + Meditations → Map → Take a mindful break → Schedule Page → Categories → Doctor Specialist → Near by Doctor → Setting → Profile → Subscription → Meditate → Doctor → Expert → Profile → settings</p>
+            </div>
+        </section>
+
+        <!-- User Persona -->
+        <section id="persona" class="persona-card">
+            <h2 class="section-title">User Persona</h2>
+            <h3 class="persona-name">Aisha Kapoor</h3>
+            <p class="persona-details">
+                Age: 27<br>
+                Job: Marketing Executive<br>
+                Location: Mumbai, India<br>
+                Status: Single
+            </p>
+            <p class="description-text">
+                I want to take control of my mental well-being and find effective strategies to navigate the challenges
+            </p>
+            
+            <div class="description-text">
+                <h4>User Story</h4>
+                <p>Aisha works in a high-pressure corporate job with tight deadlines. She often experiences stress, anxiety, and trouble sleeping due to long working hours and excessive screen time. She wants an easy way to de-stress and improve her mental well-being.</p>
+                
+                <h4>Current Feelings</h4>
+                <p>😟 Overwhelmed by work pressure</p>
+                <p>😴 Struggling with sleep issues</p>
+                <p>💭 Feels unmotivated and mentally drained</p>
+                
+                <h4>Goals</h4>
+                <p>✔️ Reduce work-related stress and anxiety</p>
+                <p>✔️ Improve sleep quality</p>
+                <p>✔️ Find a work-life balance</p>
+                
+                <h4>Pain points</h4>
+                <p>❌ No time for therapy or mental health breaks</p>
+                <p>❌ Struggles to find reliable self-care resources</p>
+                <p>❌ Feels guilty about taking time off for herself</p>
+            </div>
+        </section>
+
+        <!-- Style Guide -->
+        <section id="style-guide" class="content-section">
+            <h2 class="section-title">Style Guide</h2>
+            <h2 class="section-title">Colour Pallet</h2>
+            <h2 class="section-title">Alegreya SC</h2>
+            
+            <div class="style-guide-grid">
+                <!-- Color Palette -->
+                <div class="color-palette">
+                    <div class="color-row">
+                        <div class="color-swatch primary">Primary<br>#054E16</div>
+                        <div class="color-swatch secondary">Secondary<br>#FEFBE5</div>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-swatch tertiary">Tertiary<br>#4E6C50</div>
+                        <div class="color-swatch dark">Dark<br>#493628</div>
+                    </div>
+                </div>
+                
+                <!-- Typography -->
+                <div class="description-text">
+                    <p>The font sizes and styles that are easy to read. Differentiate headings, subheadings, and body text to enhance readability. Bold and attention- grabbing fonts for headings to crate hierarchy and attract user attentions.</p>
+                    
+                    <h4>Bold</h4>
+                    <p>Heading: 30</p>
+                    <p>Sub heading: 24</p>
+                    <p>Description: 16</p>
+                    <p>Regular</p>
+                    <p>Medium</p>
+                    
+                    <h4>Alegreya Sans</h4>
+                    <p>abcdefghijklmnopqrstuvwxyz</p>
+                    <p>ABCDEFGHIJKLMNOPUQRSTUVWXYZ</p>
+                    <p>1234567890</p>
+                    
+                    <h4>Bold</h4>
+                    <p>Heading: 24</p>
+                    <p>Sub heading: 20</p>
+                    <p>Description: 12</p>
+                    <p>Regular</p>
+                    <p>Medium</p>
+                    <p>Light</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You -->
+        <section class="thank-you">
+            <h2 class="thank-you-title">THANK YOU</h2>
+        </section>
+    </div>
+    
+    <!-- JavaScript for Navigation and Mouse Effects -->
+    <script>
+        // Global Mouse Following Animation System
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        let trails = [];
+        
+        // Create custom cursor
+        function createCustomCursor() {
+            const cursor = document.createElement('div');
+            cursor.className = 'custom-cursor';
+            document.body.appendChild(cursor);
+            return cursor;
+        }
+        
+        // Create cursor trails
+        function createCursorTrails() {
+            for (let i = 0; i < 12; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'custom-cursor-trail';
+                trail.style.opacity = (12 - i) / 12;
+                trail.style.transform = `scale(${(12 - i) / 12})`;
+                document.body.appendChild(trail);
+                trails.push({
+                    element: trail,
+                    x: 0,
+                    y: 0
+                });
+            }
+        }
+        
+        // Update cursor position
+        function updateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            
+            const cursor = document.querySelector('.custom-cursor');
+            if (cursor) {
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+            }
+            
+            // Update trails
+            trails.forEach((trail, index) => {
+                const targetX = index === 0 ? cursorX : trails[index - 1].x;
+                const targetY = index === 0 ? cursorY : trails[index - 1].y;
+                
+                trail.x += (targetX - trail.x) * 0.2;
+                trail.y += (targetY - trail.y) * 0.2;
+                
+                trail.element.style.left = trail.x + 'px';
+                trail.element.style.top = trail.y + 'px';
+            });
+            
+            requestAnimationFrame(updateCursor);
+        }
+        
+        // Create splash effect on click
+        function createSplashEffect(x, y) {
+            const splash = document.createElement('div');
+            splash.className = 'splash-effect';
+            splash.style.left = x + 'px';
+            splash.style.top = y + 'px';
+            
+            // Random color variations
+            const colors = [
+                'rgba(105, 171, 219, 0.6)',
+                'rgba(138, 82, 255, 0.6)',
+                'rgba(255, 107, 107, 0.6)',
+                'rgba(74, 144, 226, 0.6)',
+                'rgba(76, 175, 80, 0.6)'
+            ];
+            
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            splash.style.background = `radial-gradient(circle, ${randomColor} 0%, transparent 70%)`;
+            
+            document.body.appendChild(splash);
+            
+            setTimeout(() => {
+                splash.remove();
+            }, 600);
+        }
+        
+        // Mouse following gradient effect for text
+        function initializeTextGradientEffect() {
+            const textElements = document.querySelectorAll('.main-title, .section-title, .persona-name, .card-title');
+            
+            textElements.forEach(element => {
+                element.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const xPercent = (x / rect.width) * 100;
+                    const yPercent = (y / rect.height) * 100;
+                    
+                    this.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+                    this.style.textShadow = `
+                        0 0 20px rgba(105, 171, 219, 0.8),
+                        ${(x - rect.width/2) * 0.1}px ${(y - rect.height/2) * 0.1}px 30px rgba(138, 82, 255, 0.6)
+                    `;
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.backgroundPosition = '50% 50%';
+                    this.style.textShadow = '0 0 30px rgba(105, 171, 219, 0.5)';
+                });
+            });
+        }
+        
+        // Enhanced interactive elements
+        function initializeInteractiveElements() {
+            const interactiveElements = document.querySelectorAll('.research-item, .overview-card, .problem-card, .solution-card, .content-section');
+            
+            interactiveElements.forEach(element => {
+                element.classList.add('interactive-glow');
+                
+                element.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const xPercent = (x / rect.width) * 100;
+                    const yPercent = (y / rect.height) * 100;
+                    
+                    if (this.querySelector('::before')) {
+                        this.style.setProperty('--mouse-x', xPercent + '%');
+                        this.style.setProperty('--mouse-y', yPercent + '%');
+                    }
+                    
+                    // Add subtle transform based on mouse position
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
+                    
+                    this.style.transform = `
+                        translateY(-5px) 
+                        rotateX(${rotateX}deg) 
+                        rotateY(${rotateY}deg) 
+                        scale(1.02)
+                    `;
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+        // Smooth scrolling function with enhanced animations
+        function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            if (targetSection) {
+                // Remove active class from all nav items
+                navItems.forEach(item => item.classList.remove('active'));
+                
+                // Add active class to clicked nav item
+                event.target.classList.add('active');
+                
+                // Calculate offset for fixed header
+                const headerHeight = document.querySelector('.nav-section').offsetHeight;
+                const offset = headerHeight + 20; // Extra padding
+                const targetPosition = targetSection.offsetTop - offset;
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Add visual feedback animation
+                targetSection.style.transform = 'scale(1.01)';
+                targetSection.style.transition = 'transform 0.3s ease';
+                
+                setTimeout(() => {
+                    targetSection.style.transform = 'scale(1)';
+                }, 300);
+            }
+        }
+        
+        // Intersection Observer for active navigation highlighting
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '-120px 0px -120px 0px' // Account for fixed header
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    const navItems = document.querySelectorAll('.nav-item');
+                    
+                    // Remove active class from all nav items
+                    navItems.forEach(item => item.classList.remove('active'));
+                    
+                    // Add active class to corresponding nav item
+                    navItems.forEach(item => {
+                        const text = item.textContent.toLowerCase().replace(/\s+/g, '-');
+                        if (sectionId === 'overview' && item.textContent.includes('Project Overview')) {
+                            item.classList.add('active');
+                        } else if (sectionId === 'research' && item.textContent.includes('Research')) {
+                            item.classList.add('active');
+                        } else if (sectionId === 'empathy' && item.textContent.includes('Empathy')) {
+                            item.classList.add('active');
+                        } else if (sectionId === 'persona' && item.textContent.includes('Persona')) {
+                            item.classList.add('active');
+                        } else if (sectionId === 'style-guide' && item.textContent.includes('Style')) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize cursor system
+            const cursor = createCustomCursor();
+            createCursorTrails();
+            updateCursor();
+            
+            // Initialize text gradient effects
+            initializeTextGradientEffect();
+            
+            // Initialize interactive elements
+            initializeInteractiveElements();
+            
+            // Add global mouse move listener
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Create random splash effects occasionally
+                if (Math.random() < 0.02) { // 2% chance
+                    createSplashEffect(e.clientX, e.clientY);
+                }
+            });
+            
+            // Add click splash effects
+            document.addEventListener('click', (e) => {
+                createSplashEffect(e.clientX, e.clientY);
+                
+                // Create multiple smaller splashes around the click
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const offsetX = (Math.random() - 0.5) * 100;
+                        const offsetY = (Math.random() - 0.5) * 100;
+                        createSplashEffect(e.clientX + offsetX, e.clientY + offsetY);
+                    }, i * 100);
+                }
+            });
+            
+            // Original section observer code
+            const sections = ['overview', 'research', 'empathy', 'persona', 'style-guide'];
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    observer.observe(section);
+                }
+            });
+            
+            // Add entrance animations
+            const contentSections = document.querySelectorAll('.content-section, .persona-card, .logo-section');
+            contentSections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+            
+            // Add home button animation on page load
+            const homeButton = document.querySelector('.home-button');
+            if (homeButton) {
+                homeButton.style.transform = 'translateY(-100px)';
+                homeButton.style.transition = 'transform 0.8s ease';
+                
+                setTimeout(() => {
+                    homeButton.style.transform = 'translateY(0)';
+                }, 500);
+            }
+        });
+        
+        // Enhanced scroll effects
+        let ticking = false;
+        let lastScrollTop = 0;
+        
+        function updateScrollEffects() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            const header = document.querySelector('.nav-section');
+            
+            // Header hide/show on scroll
+            if (scrolled > lastScrollTop && scrolled > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrolled;
+            
+            // Parallax effect for background images (reduced to prevent overlap)
+            const bgImages = document.querySelectorAll('.bg-image-15, .bg-image-16');
+            bgImages.forEach(img => {
+                img.style.transform = `translateY(${rate * 0.2}px)`;
+            });
+            
+            ticking = false;
+        }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick);
+        
+        // Add hover effects to research items
+        document.addEventListener('DOMContentLoaded', () => {
+            const researchItems = document.querySelectorAll('.research-item');
+            researchItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.transform = 'translateY(-8px) scale(1.02)';
+                    item.style.boxShadow = '0 10px 25px rgba(5, 78, 22, 0.15)';
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = 'translateY(0) scale(1)';
+                    item.style.boxShadow = '0 5px 15px rgba(0,0,0,0.08)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
