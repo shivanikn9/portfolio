@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Shivani K.N | UI/UX Design Projects</title>
+    <meta name="description" content="View Shivani K.N's portfolio of UI/UX design projects including web applications, mobile apps, and digital experiences.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; script-src 'self'; img-src 'self' data:; font-src 'self' fonts.gstatic.com; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/fi323asset-11600-1.png" alt="Shivani Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Page Content -->
+    <section class="portfolio-page">
+        <div class="portfolio-page-content">
+            <div class="portfolio-hero">
+                <h1 class="portfolio-page-title">My Portfolio</h1>
+                <p class="portfolio-page-subtitle">A collection of my recent UI/UX design projects</p>
+            </div>
+
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">All Projects</button>
+                <button class="filter-btn" data-filter="web" onclick="filterProjects('web')">Web Design</button>
+                <button class="filter-btn" data-filter="mobile" onclick="filterProjects('mobile')">Mobile Apps</button>
+                <button class="filter-btn" data-filter="animation" onclick="filterProjects('animation')">Animations</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- WEB DESIGN PROJECTS -->
+                <div class="portfolio-item portfolio-item-1" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="1" onclick="openPortfolioItem(1, event)">
+                        <img src="assets/rectangle-1060.png" alt="Plant Website">
+                        <div class="portfolio-overlay">
+                            <span>Plant Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-2" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="2" onclick="openPortfolioItem(2, event)">
+                        <img src="assets/rectangle-1061.png" alt="Flower Website">
+                        <div class="portfolio-overlay">
+                            <span>Flower Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-3" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="3" onclick="openPortfolioItem(3, event)">
+                        <img src="assets/rectangle-1062.png" alt="Interior Design Website">
+                        <div class="portfolio-overlay">
+                            <span>Interior Design Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-4" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="4" onclick="openPortfolioItem(4, event)">
+                        <img src="assets/rectangle-1063.png" alt="Wedding Event Planner">
+                        <div class="portfolio-overlay">
+                            <span>Wedding Event Planner</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-5" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="5" onclick="openPortfolioItem(5, event)">
+                        <img src="assets/rectangle-1064.png" alt="Hotel Website">
+                        <div class="portfolio-overlay">
+                            <span>Hotel Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-6" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="6" onclick="openPortfolioItem(6, event)">
+                        <img src="assets/rectangle-1060.png" alt="Swaragh Website">
+                        <div class="portfolio-overlay">
+                            <span>Swaragh Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-7" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="7" onclick="openPortfolioItem(7, event)">
+                        <img src="assets/rectangle-1061.png" alt="SPOCLEARN Platform">
+                        <div class="portfolio-overlay">
+                            <span>SPOCLEARN Platform</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-8" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="8" onclick="openPortfolioItem(8, event)">
+                        <img src="assets/rectangle-1062.png" alt="Pet Care Website">
+                        <div class="portfolio-overlay">
+                            <span>Pet Care Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-9" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="9" onclick="openPortfolioItem(9, event)">
+                        <img src="assets/rectangle-1063.png" alt="Bento Design">
+                        <div class="portfolio-overlay">
+                            <span>Bento Design</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-10" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="10" onclick="openPortfolioItem(10, event)">
+                        <img src="assets/rectangle-1064.png" alt="Smoothie Website">
+                        <div class="portfolio-overlay">
+                            <span>Smoothie Website</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-11" data-category="web">
+                    <a href="#" class="portfolio-link" data-project="11" onclick="openPortfolioItem(11, event)">
+                        <img src="assets/rectangle-1060.png" alt="Freelancing Platform">
+                        <div class="portfolio-overlay">
+                            <span>Freelancing Platform</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- MOBILE APP PROJECTS -->
+                <div class="portfolio-item portfolio-item-12" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="12" onclick="openPortfolioItem(12, event)">
+                        <img src="assets/rectangle-1061.png" alt="Self Nurture App">
+                        <div class="portfolio-overlay">
+                            <span>Self Nurture App</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-13" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="13" onclick="openPortfolioItem(13, event)">
+                        <img src="assets/rectangle-1062.png" alt="Art Gallery App">
+                        <div class="portfolio-overlay">
+                            <span>Art Gallery App</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-14" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="14" onclick="openPortfolioItem(14, event)">
+                        <img src="assets/rectangle-1063.png" alt="Valentine App">
+                        <div class="portfolio-overlay">
+                            <span>Valentine App</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-15" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="15" onclick="openPortfolioItem(15, event)">
+                        <img src="assets/rectangle-1064.png" alt="Art Gallery Pro">
+                        <div class="portfolio-overlay">
+                            <span>Art Gallery Pro</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-16" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="16" onclick="openPortfolioItem(16, event)">
+                        <img src="assets/rectangle-1060.png" alt="Login Screens">
+                        <div class="portfolio-overlay">
+                            <span>Login Screens</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-17" data-category="mobile">
+                    <a href="#" class="portfolio-link" data-project="17" onclick="openPortfolioItem(17, event)">
+                        <img src="assets/rectangle-1061.png" alt="Fish App">
+                        <div class="portfolio-overlay">
+                            <span>Fish App</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- ANIMATION PROJECTS -->
+                <div class="portfolio-item portfolio-item-18" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="18" onclick="openPortfolioItem(18, event)">
+                        <img src="assets/rectangle-1062.png" alt="Hover Animation">
+                        <div class="portfolio-overlay">
+                            <span>Hover Animation</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-19" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="19" onclick="openPortfolioItem(19, event)">
+                        <img src="assets/rectangle-1063.png" alt="Scroll Animation">
+                        <div class="portfolio-overlay">
+                            <span>Scroll Animation</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-20" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="20" onclick="openPortfolioItem(20, event)">
+                        <img src="assets/rectangle-1064.png" alt="3D Carousel Slider">
+                        <div class="portfolio-overlay">
+                            <span>3D Carousel Slider</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-21" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="21" onclick="openPortfolioItem(21, event)">
+                        <img src="assets/rectangle-1060.png" alt="3D Carousel">
+                        <div class="portfolio-overlay">
+                            <span>3D Carousel</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-22" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="22" onclick="openPortfolioItem(22, event)">
+                        <img src="assets/rectangle-1061.png" alt="Spin Animation">
+                        <div class="portfolio-overlay">
+                            <span>Spin Animation</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-23" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="23" onclick="openPortfolioItem(23, event)">
+                        <img src="assets/rectangle-1062.png" alt="Interactive Animation">
+                        <div class="portfolio-overlay">
+                            <span>Interactive Animation</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-24" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="24" onclick="openPortfolioItem(24, event)">
+                        <img src="assets/rectangle-1063.png" alt="On Click On Drag">
+                        <div class="portfolio-overlay">
+                            <span>On Click On Drag</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-25" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="25" onclick="openPortfolioItem(25, event)">
+                        <img src="assets/rectangle-1064.png" alt="Horizontal Scroll">
+                        <div class="portfolio-overlay">
+                            <span>Horizontal Scroll</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item portfolio-item-26" data-category="animation">
+                    <a href="#" class="portfolio-link" data-project="26" onclick="openPortfolioItem(26, event)">
+                        <img src="assets/rectangle-1060.png" alt="Creative Animation">
+                        <div class="portfolio-overlay">
+                            <span>Creative Animation</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="portfolio-button">
+                <button class="btn-primary" onclick="showMorePortfolio()">See More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <div class="modal-content portfolio-modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="portfolio-modal-header">
+                <h3 id="portfolioTitle">Portfolio Project</h3>
+                <div class="portfolio-links">
+                    <a href="#" id="figmaLink" target="_blank" class="portfolio-external-link">View in Figma</a>
+                    <a href="#" id="liveLink" target="_blank" class="portfolio-external-link">Live Demo</a>
+                </div>
+            </div>
+            <img id="modalImage" src="" alt="Portfolio Item">
+            <div class="portfolio-description">
+                <p id="portfolioDescription">Project description will appear here.</p>
+            </div>
+            <div class="modal-nav">
+                <button onclick="prevPortfolioItem()">&lt; Previous</button>
+                <button onclick="nextPortfolioItem()">Next &gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/global-animations.js"></script>
+</body>
+</html>
