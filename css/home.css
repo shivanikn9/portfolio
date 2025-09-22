@@ -864,7 +864,7 @@
         height: 120px !important;
     }
     .btn-primary {
-        min-width: 90px;
+        min-width: 50px;
         height: 36px;
         font-size: 14px;
         padding: 8px 12px;

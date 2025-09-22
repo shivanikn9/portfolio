@@ -1,4 +1,82 @@
 // ========================================
+// NAVIGATION FUNCTIONS FOR BUTTONS
+// ========================================
+
+function scrollToContact() {
+    console.log('🎯 Scrolling to contact section...');
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        // Add smooth scroll with offset for navbar
+        const offsetTop = contactSection.offsetTop - 80;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+        console.log('✨ Smooth scroll to contact initiated');
+    } else {
+        console.warn('Contact section not found, navigating to contact page');
+        window.location.href = 'contact.html';
+    }
+}
+
+function showMoreAbout() {
+    window.location.href = 'about.html';
+}
+
+function showMorePortfolio() {
+    window.location.href = 'portfolio.html';
+}
+
+function openContactForm() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+        modal.style.display = 'block';
+    } else {
+        // If modal doesn't exist, navigate to contact page
+        window.location.href = 'contact.html';
+    }
+}
+
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Initialize button event listeners when DOM is loaded
+function initializeButtonListeners() {
+    // Get Connected button - using onclick attribute in HTML, no additional listener needed
+    console.log('✅ Get Connected button uses onclick="scrollToContact()" from HTML');
+    
+    // See More About Me button
+    const btnSeeMoreAbout = document.getElementById('btn-see-more-about');
+    if (btnSeeMoreAbout) {
+        btnSeeMoreAbout.addEventListener('click', function() {
+            window.location.href = 'about.html';
+        });
+    }
+    
+    // See More Projects button
+    const btnSeeMoreProjects = document.getElementById('btn-see-more-projects');
+    if (btnSeeMoreProjects) {
+        btnSeeMoreProjects.addEventListener('click', function() {
+            window.location.href = 'portfolio.html';
+        });
+    }
+    
+    // Contact button (footer)
+    const btnContact = document.getElementById('btn-contact');
+    if (btnContact) {
+        btnContact.addEventListener('click', function() {
+            window.location.href = 'contact.html';
+        });
+    }
+    
+    console.log('✅ Button event listeners initialized');
+}
+
+// ========================================
 // SMOOTH ANIMATIONS INITIALIZATION SYSTEM
 // ========================================
 
@@ -167,6 +245,9 @@ function addSmoothFilteringEnhancements() {
 // RUN ALL SMOOTH ANIMATION INITIALIZATIONS
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🎆 STARTING SMOOTH ANIMATIONS SETUP');
+    
+    // Initialize button listeners immediately
+    initializeButtonListeners();
     
     setTimeout(() => {
         initializeSmoothAnimations();
@@ -578,63 +659,33 @@ function handleNavigationScroll() {
 }
 
 // Navigation Functions
-function scrollToContact() {
-    const contactSection = document.querySelector('#contact');
-    if (contactSection) {
-        contactSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-}
+// scrollToContact function is defined at the top of the file
 
 // About Section Functions
 function showMoreAbout() {
-    // Create and show more about modal or expand content
-    const aboutText = document.querySelector('.about-text');
-    const moreInfo = `
-        <br><br>
-        I have 3+ years of experience in designing digital products for web and mobile platforms. 
-        My expertise includes user research, wireframing, prototyping, and creating design systems 
-        that ensure consistency across all touchpoints.<br><br>
-        
-        I'm passionate about creating accessible designs that work for everyone, regardless of their 
-        abilities or the devices they use. I believe that good design should be invisible – it should 
-        work so well that users don't have to think about it.<br><br>
-        
-        When I'm not designing, you can find me exploring new design trends, reading about psychology 
-        and human behavior, or working on personal creative projects.
-    `;
+    console.log('🎯 Navigating to About page...');
     
-    if (!aboutText.innerHTML.includes('3+ years of experience')) {
-        aboutText.innerHTML += moreInfo;
+    // Add button click animation before navigation
+    const seeMoreBtn = document.querySelector('button[onclick="showMoreAbout()"]');
+    
+    if (seeMoreBtn) {
+        // Visual feedback on click
+        seeMoreBtn.style.transform = 'scale(0.95)';
+        seeMoreBtn.style.transition = 'transform 0.2s ease';
         
-        // Change button text
-        const button = event.target;
-        button.textContent = 'Show Less';
-        button.onclick = showLessAbout;
+        setTimeout(() => {
+            seeMoreBtn.style.transform = 'scale(1)';
+        }, 200);
     }
+    
+    // Navigate to about page with slight delay for animation
+    setTimeout(() => {
+        window.location.href = 'about.html';
+    }, 300);
+    
+    console.log('✨ Navigation to about page initiated');
 }
 
-function showLessAbout() {
-    const aboutText = document.querySelector('.about-text');
-    const originalText = `
-        My name is Shivani K.N.<br>
-        A passionate UI/UX designer who loves<br>
-        crafting intuitive, user-centered digital<br>
-        experiences. With a keen eye for design<br>
-        and a problem-solving mindset.<br>
-        I specialize in turning complex ideas into<br>
-        simple, beautiful, and functional interfaces.
-    `;
-    
-    aboutText.innerHTML = originalText;
-    
-    // Change button text back
-    const button = event.target;
-    button.textContent = 'See More About Me';
-    button.onclick = showMoreAbout;
-}
 
 // Portfolio Functions
 // Portfolio functionality - Direct links only (performance optimized)

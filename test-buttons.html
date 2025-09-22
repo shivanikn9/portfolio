@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test - Shivani Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .test-button:hover {
+            background-color: #0056b3;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .status.pass {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.fail {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Button Functionality Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Results</h2>
+        <p>Click each button below to test the functionality:</p>
+        
+        <div>
+            <strong>1. Get Connected Button:</strong>
+            <button class="test-button" onclick="testScrollToContact()">Test Get Connected</button>
+            <span id="scroll-status" class="status">Not tested</span>
+        </div>
+        
+        <div>
+            <strong>2. See More About Me Button:</strong>
+            <button class="test-button" onclick="testShowMoreAbout()">Test See More About</button>
+            <span id="about-status" class="status">Not tested</span>
+        </div>
+        
+        <div>
+            <strong>3. See More Projects Button:</strong>
+            <button class="test-button" onclick="testShowMorePortfolio()">Test See More Projects</button>
+            <span id="portfolio-status" class="status">Not tested</span>
+        </div>
+        
+        <div>
+            <strong>4. Contact Modal Button:</strong>
+            <button class="test-button" onclick="testOpenContactForm()">Test Contact Modal</button>
+            <span id="contact-status" class="status">Not tested</span>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Go Back to Portfolio</h2>
+        <a href="index.html" class="test-button">Back to Portfolio</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function testScrollToContact() {
+            try {
+                if (typeof scrollToContact === 'function') {
+                    // Since we're not on the index page, we'll just check if the function exists
+                    document.getElementById('scroll-status').textContent = 'Function exists - would scroll to contact section';
+                    document.getElementById('scroll-status').className = 'status pass';
+                } else {
+                    document.getElementById('scroll-status').textContent = 'Function not found';
+                    document.getElementById('scroll-status').className = 'status fail';
+                }
+            } catch (e) {
+                document.getElementById('scroll-status').textContent = 'Error: ' + e.message;
+                document.getElementById('scroll-status').className = 'status fail';
+            }
+        }
+        
+        function testShowMoreAbout() {
+            try {
+                if (typeof showMoreAbout === 'function') {
+                    document.getElementById('about-status').textContent = 'Function exists - would navigate to about.html';
+                    document.getElementById('about-status').className = 'status pass';
+                } else {
+                    document.getElementById('about-status').textContent = 'Function not found';
+                    document.getElementById('about-status').className = 'status fail';
+                }
+            } catch (e) {
+                document.getElementById('about-status').textContent = 'Error: ' + e.message;
+                document.getElementById('about-status').className = 'status fail';
+            }
+        }
+        
+        function testShowMorePortfolio() {
+            try {
+                if (typeof showMorePortfolio === 'function') {
+                    document.getElementById('portfolio-status').textContent = 'Function exists - would navigate to portfolio.html';
+                    document.getElementById('portfolio-status').className = 'status pass';
+                } else {
+                    document.getElementById('portfolio-status').textContent = 'Function not found';
+                    document.getElementById('portfolio-status').className = 'status fail';
+                }
+            } catch (e) {
+                document.getElementById('portfolio-status').textContent = 'Error: ' + e.message;
+                document.getElementById('portfolio-status').className = 'status fail';
+            }
+        }
+        
+        function testOpenContactForm() {
+            try {
+                if (typeof openContactForm === 'function') {
+                    document.getElementById('contact-status').textContent = 'Function exists - would open contact modal';
+                    document.getElementById('contact-status').className = 'status pass';
+                } else {
+                    document.getElementById('contact-status').textContent = 'Function not found';
+                    document.getElementById('contact-status').className = 'status fail';
+                }
+            } catch (e) {
+                document.getElementById('contact-status').textContent = 'Error: ' + e.message;
+                document.getElementById('contact-status').className = 'status fail';
+            }
+        }
+        
+        // Auto-run all tests on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                testScrollToContact();
+                testShowMoreAbout();
+                testShowMorePortfolio();
+                testOpenContactForm();
+            }, 100);
+        });
+    </script>
+</body>
+</html>
