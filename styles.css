@@ -264,10 +264,35 @@ textarea:focus {
 
 
 /* SIZE OVERRIDES: Make these buttons width auto-size to text length */
-.hero-content .btn-primary,
+/* Ultra-specific selector for Get Connected button */
+#home .hero-content .hero-left .btn-primary {
+    min-width: 160px !important;
+    width: 300px !important;
+    padding: 16px 16px !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    border-radius: 20px !important;
+    letter-spacing: 1.76px !important;
+    height: 64px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hero-content .btn-primary {
+    min-width: 160px !important;
+    width: auto !important;
+    padding: 16px 16px !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    border-radius: 20px !important;
+    letter-spacing: 1.76px !important;
+    height: 64px !important;
+}
+
 .about-right .btn-primary {
     min-width: 120px;
-    width: auto;
+    width: 300px;
     padding: 8px 18px;
     font-size: 1rem;
     font-weight: 500;

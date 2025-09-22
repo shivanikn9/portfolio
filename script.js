@@ -2,6 +2,15 @@
 // NAVIGATION FUNCTIONS FOR BUTTONS
 // ========================================
 
+// Portfolio page: default to limited view (first 9 items)
+if (window && typeof window !== 'undefined') {
+  try {
+    if (window.location && /portfolio\.html(\?.*)?$/i.test(window.location.pathname)) {
+      window.__portfolioLimited = true; // default: show less
+    }
+  } catch (_) {}
+}
+
 function scrollToContact() {
     console.log('🎯 Scrolling to contact section...');
     const contactSection = document.getElementById('contact');
@@ -751,30 +760,73 @@ function testFunction() {
 
 // Portfolio Filtering Function - Now uses the enhanced version above
 
-// Enhanced Show More Portfolio Function with Smooth Animations
+// Toggle Portfolio Items Show More/Less Function
 function showMorePortfolio() {
-    console.log('🎯 Navigating to Portfolio page...');
-    
-    // Add button click animation before navigation
-    const seeMoreBtn = document.querySelector('.portfolio-button .btn-primary');
-    
-    if (seeMoreBtn) {
-        // Visual feedback on click
-        seeMoreBtn.style.transform = 'scale(0.95)';
-        seeMoreBtn.style.transition = 'transform 0.2s ease';
-        
-        setTimeout(() => {
-            seeMoreBtn.style.transform = 'scale(1)';
-        }, 200);
+    const button = document.querySelector('.portfolio-page .portfolio-button .btn-primary');
+    if (!button) return;
+
+    // Toggle limited mode flag
+    const currentlyLimited = !!window.__portfolioLimited;
+    window.__portfolioLimited = !currentlyLimited;
+
+    // Update button label
+    button.textContent = window.__portfolioLimited ? 'Show More' : 'Show Less';
+
+    // Re-apply current category filter with new limit mode
+    let active = document.querySelector('.filter-btn.active');
+    const category = active ? active.getAttribute('data-filter') : 'all';
+    try {
+        filterProjects(category);
+    } catch (e) {
+        console.warn('filterProjects not ready yet, retrying shortly...', e);
+        setTimeout(() => filterProjects(category), 50);
     }
-    
-    // Navigate to portfolio page with slight delay for animation
-    setTimeout(() => {
-        window.location.href = 'portfolio.html';
-    }, 300);
-    
-    console.log('✨ Navigation to portfolio page initiated');
+
+    // Click feedback
+    button.style.transform = 'scale(0.95)';
+    button.style.transition = 'transform 0.2s ease';
+    setTimeout(() => { button.style.transform = 'scale(1)'; }, 180);
 }
+
+// Initialize Portfolio Page - Hide items beyond first 9
+function initializePortfolioPage() {
+    // Only run this on portfolio page
+    if (!/portfolio\.html(\?.*)?$/i.test(window.location.pathname)) return;
+
+    // Set limited mode by default
+    window.__portfolioLimited = true;
+
+    const button = document.querySelector('.portfolio-page .portfolio-button .btn-primary');
+    if (button) {
+        button.textContent = 'Show More';
+        // Attach click handler (CSP-safe)
+        button._seeMoreBound && button.removeEventListener('click', button._seeMoreBound);
+        button._seeMoreBound = function(e) {
+            e.preventDefault();
+            showMorePortfolio();
+        };
+        button.addEventListener('click', button._seeMoreBound);
+    }
+
+    // Apply current filter with limited mode
+    let active = document.querySelector('.filter-btn.active');
+    const category = active ? active.getAttribute('data-filter') : 'all';
+    setTimeout(() => {
+        filterProjects(category);
+    }, 0);
+
+    console.log('🎨 Portfolio page initialized - limited mode (first 9)');
+}
+
+// Run initialization when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializePortfolioPage();
+});
+
+// Also run on window load for safety
+window.addEventListener('load', function() {
+    initializePortfolioPage();
+});
 
 // Contact Functions
 function openContactForm() {
@@ -1305,7 +1357,7 @@ window.submitContactForm = submitContactForm;
 
 // ULTIMATE SMOOTH FILTERING FUNCTION WITH ADVANCED ANIMATIONS
 function filterProjects(category) {
-    console.log('🎬 SMOOTH FILTERING STARTED FOR:', category);
+    console.log('🎬 SMOOTH FILTERING STARTED FOR:', category, 'limited:', !!window.__portfolioLimited);
     
     // STEP 1: ANIMATE BUTTON STATE CHANGES WITH SMOOTH TRANSITIONS
     const allButtons = document.querySelectorAll('.filter-btn, button.filter-btn, [data-filter]');
@@ -1364,15 +1416,16 @@ function filterProjects(category) {
     
     let showDelay = 0;
     let hideDelay = 0;
-    
+    let shownCount = 0;
+
     allItems.forEach((item, index) => {
         const itemCategory = item.getAttribute('data-category');
-        console.log(`🎨 Processing Item ${index + 1}: ${itemCategory}`);
+        const matches = category === 'all' || itemCategory === category;
+        const shouldLimit = !!window.__portfolioLimited;
+        const allowShow = matches && (!shouldLimit || (shouldLimit && shownCount < 9));
         
-        if (category === 'all' || itemCategory === category) {
+        if (allowShow) {
             // SMOOTH SHOW ANIMATION WITH STAGGERED TIMING
-            console.log(`✨ SMOOTHLY SHOWING: ${itemCategory}`);
-            
             setTimeout(() => {
                 item.style.setProperty('display', 'block', 'important');
                 item.style.setProperty('visibility', 'visible', 'important');
@@ -1393,11 +1446,9 @@ function filterProjects(category) {
             }, showDelay);
             
             showDelay += 100; // Stagger by 100ms
-            
+            shownCount++;
         } else {
             // SMOOTH HIDE ANIMATION WITH STAGGERED TIMING
-            console.log(`🌙 SMOOTHLY HIDING: ${itemCategory}`);
-            
             setTimeout(() => {
                 item.classList.add('filtered-out');
                 item.classList.remove('filtered-in');
