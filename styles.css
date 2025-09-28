@@ -918,16 +918,20 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(105, 171, 219, 0.5);
+    /* Removed text-shadow for crisp rendering */
     position: relative;
     z-index: 2;
     cursor: default;
     transition: all 0.3s ease;
+    /* Enhanced text rendering for crisp display */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .name-text:hover {
     transform: scale(1.02);
-    text-shadow: 0 0 40px rgba(105, 171, 219, 0.8);
+    /* Removed text-shadow from hover for crisp rendering */
 }
 
 /* About page title - only "Shivani K.N" part gets the effect */
@@ -1002,14 +1006,18 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(105, 171, 219, 0.3);
+    /* Removed text-shadow for crisp rendering */
     cursor: default;
     transition: all 0.3s ease;
+    /* Enhanced text rendering for crisp display */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .about-text strong:hover {
     transform: scale(1.05);
-    text-shadow: 0 0 15px rgba(105, 171, 219, 0.5);
+    /* Removed text-shadow from hover for crisp rendering */
 }
 
 .role-text {
