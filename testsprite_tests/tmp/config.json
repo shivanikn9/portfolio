@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8001",
+  "executionArgs": {
+    "projectName": "resume",
+    "projectPath": "/Users/vinu/Desktop/me/resume",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-Xcv6YKRX7BYfSGycfSCtSKl1X_9UpdNlRlSw-IkhOtDLxMg0dwY5f40n63axy76dgSO5TdifZGEz95Iem6vLqCaOUInUVrHA8F1QIF9E-ShdJ8mSQ3gUAiyOfamapTMcuaU"
+    }
+  },
+  "proxy": "http://bd135aac-f924-4914-8e9d-7175a121c741:LKfHfpAqMqgnjWc6oP5tGPBDec5nsdbM@tun.testsprite.com:8080"
+}

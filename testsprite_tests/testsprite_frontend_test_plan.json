@@ -1,0 +1,328 @@
+[
+  {
+    "id": "TC001",
+    "title": "Homepage Animated Typing Effect",
+    "description": "Verify that the animated typing effect in the hero section runs smoothly, cycles through all intended phrases, and does not cause performance issues.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage."
+      },
+      {
+        "type": "assertion",
+        "description": "Observe that the animated typing effect begins automatically."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that all predefined textual phrases are displayed sequentially with typing and deleting animation."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that the animation loops continuously without freezing or lag."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no JavaScript errors or browser console errors are generated during animation."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Responsive Navigation Bar Functionality",
+    "description": "Verify that the responsive navigation bar works correctly across devices with smooth scrolling to sections when clicked.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the website on desktop, tablet, and mobile devices."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the navigation bar adapts layout appropriately for each screen size."
+      },
+      {
+        "type": "action",
+        "description": "Click each navigation link in the navbar."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that the page smoothly scrolls to the correct target section for each navigation item."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no broken links or unexpected jumps occur during navigation."
+      },
+      {
+        "type": "action",
+        "description": "On mobile, open and close the hamburger menu multiple times."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the menu opens and closes smoothly without layout glitches or freezing."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Skills Progress Bars Display and Animation",
+    "description": "Check the skills progress bars accurately reflect skill levels and animate into view when the user scrolls to the Skills section.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage and scroll down to the Skills section."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that each skill has an associated progress bar displayed."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the lengths of progress bars correspond correctly with the stated proficiency levels."
+      },
+      {
+        "type": "assertion",
+        "description": "Observe that the progress bars animate smoothly from zero to their respective levels upon scrolling into view."
+      },
+      {
+        "type": "action",
+        "description": "Scroll up and down multiple times."
+      },
+      {
+        "type": "assertion",
+        "description": "Check the animation triggers only on initial scroll into view and does not cause flickering or repetition issues."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Project Modal Open and Close Behavior",
+    "description": "Verify that clicking on any project opens a modal with detailed project information and the modal can be closed properly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Scroll to the Projects section on the homepage."
+      },
+      {
+        "type": "action",
+        "description": "Click on a project thumbnail or link."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that a modal window appears with detailed and relevant information about the selected project."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the modal overlays the main content and prevents background interaction."
+      },
+      {
+        "type": "action",
+        "description": "Close the modal using the close button or clicking outside the modal area."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the modal closes smoothly and returns the user to the original page view without content disruption."
+      },
+      {
+        "type": "action",
+        "description": "Repeat the process with each project to verify all modals function correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Experience Timeline Chronological Order Display",
+    "description": "Ensure the experience timeline presents professional history and education in correct chronological order and is fully visible on all supported devices.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Experience section."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify entries are sorted accurately from earliest to latest or as defined in the PRD."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that the timeline is fully visible and horizontally or vertically scrollable without clipping on all devices and screen orientations."
+      },
+      {
+        "type": "action",
+        "description": "Resize browser and test on mobile devices."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure layout and readability remain intact with no overlapping text or missing content."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Contact Information Accuracy and Link Functionality",
+    "description": "Verify that all contact details are correct, clickable where appropriate, and social media icons redirect correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Contact section."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that all displayed contact information such as email, phone number, and address are accurate."
+      },
+      {
+        "type": "action",
+        "description": "Click on email and phone links if present."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the appropriate email client or phone dialer opens."
+      },
+      {
+        "type": "action",
+        "description": "Click each social media icon or link."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify each link redirects to the correct social media platform page in a new tab or window."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no broken links or 404 errors occur."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Website Responsiveness and Visual Layout Consistency",
+    "description": "Verify that the entire website displays correctly and functions consistently on different browsers and major devices with varying screen sizes.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the website using browsers such as Chrome, Firefox, Safari, and Edge."
+      },
+      {
+        "type": "assertion",
+        "description": "Check for visual consistency including fonts, colors, spacing, and alignment across browsers."
+      },
+      {
+        "type": "action",
+        "description": "Test the website on devices including desktop monitors, tablets, and smartphones of various screen sizes."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that page layouts adapt appropriately without horizontal scrollbars or clipped content."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure interactive elements are accessible and usable on touch screens."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Error Handling for Missing Project Data in Modal",
+    "description": "Test how the project modal system behaves when project details are missing or incomplete.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate a scenario where a project entry lacks some or all detailed data."
+      },
+      {
+        "type": "action",
+        "description": "Click on the affected project to open the modal."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the modal handles missing data gracefully by displaying default messages or placeholders."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no uncaught errors or broken UI elements appear."
+      },
+      {
+        "type": "action",
+        "description": "Close the modal and verify normal site functionality resumes."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Navigation Bar Accessibility and Keyboard Navigation",
+    "description": "Ensure the responsive navigation bar is accessible and can be fully navigated using keyboard inputs alone.",
+    "category": "security",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Load the website homepage."
+      },
+      {
+        "type": "action",
+        "description": "Use the keyboard Tab key to navigate through the navigation bar items."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the focus indicator is clearly visible on each navigation item."
+      },
+      {
+        "type": "action",
+        "description": "Press Enter or Space to activate navigation links."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that links correctly navigate or scroll to the target sections."
+      },
+      {
+        "type": "action",
+        "description": "Test keyboard control of the mobile dropdown menu (hamburger icon)."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure keyboard users can open and close the menu and access links inside it."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Performance Under Heavy Scroll and Interaction",
+    "description": "Verify the website performance remains smooth without lags or crashes during heavy scrolling and multiple interactions such as opening modals and navigating sections rapidly.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Rapidly scroll up and down through all sections of the webpage multiple times."
+      },
+      {
+        "type": "action",
+        "description": "Open and close different project modals multiple times in quick succession."
+      },
+      {
+        "type": "action",
+        "description": "Switch between different sections using the navigation bar quickly."
+      },
+      {
+        "type": "assertion",
+        "description": "Observe the website's responsiveness remains unaffected and animations continue smoothly."
+      },
+      {
+        "type": "assertion",
+        "description": "Check browser's performance tools to confirm no excessive CPU or memory usage spikes."
+      }
+    ]
+  }
+]

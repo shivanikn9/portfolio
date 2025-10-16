@@ -1,0 +1,40 @@
+{
+  "tech_stack": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Python"],
+  "features": [
+    {
+      "name": "Portfolio Website",
+      "description": "Main portfolio website showcasing skills, projects, and contact information",
+      "files": ["index.html", "css/style.css", "js/main.js"]
+    },
+    {
+      "name": "Responsive Navigation",
+      "description": "Mobile-friendly navigation bar with smooth scrolling",
+      "files": ["index.html", "js/main.js"]
+    },
+    {
+      "name": "Animated Typing Effect",
+      "description": "Dynamic typing animation in the hero section",
+      "files": ["index.html"]
+    },
+    {
+      "name": "Skills Progress Bars",
+      "description": "Visual representation of technical skills with progress indicators",
+      "files": ["index.html"]
+    },
+    {
+      "name": "Project Modal System",
+      "description": "Interactive modal windows for detailed project descriptions",
+      "files": ["index.html"]
+    },
+    {
+      "name": "Experience Timeline",
+      "description": "Professional experience and education sections",
+      "files": ["index.html"]
+    },
+    {
+      "name": "Contact Information",
+      "description": "Contact details and social media links",
+      "files": ["index.html"]
+    }
+  ]
+}
