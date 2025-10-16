@@ -57,6 +57,29 @@
 }
 
 
+/* Resume section spacing - Add gap on both sides */
+.resume-section-spacing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .resume-section-spacing {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .resume-section-spacing .row {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  
+  .resume-section-spacing .col-md-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 /* Animation styles */
 #typing-animation {
   position: relative;
@@ -137,7 +160,7 @@
   color: #aaa;
 }
 
-</style>
+```
 
 
   </head>
@@ -350,7 +373,7 @@
 
 	
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
+    	<div class="container resume-section-spacing">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
