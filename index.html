@@ -515,92 +515,217 @@
 
 	<section class="ftco-section" id="project-section">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Projects</h1>
-					<h2 class="mb-4">Featured Projects</h2>
-					<p>Explore my UI/UX design projects and creative work</p>
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Portfolio</h1>
+					<h2 class="mb-4">My Design Projects</h2>
+					<p>Explore my UI/UX design projects across web, mobile, and animation</p>
 				</div>
 			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
+
+			<!-- Category Filter Buttons -->
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-12 text-center">
+					<button class="btn btn-primary m-2" onclick="filterProjects('all')">All Projects</button>
+					<button class="btn btn-outline-primary m-2" onclick="filterProjects('web')">Web Design</button>
+					<button class="btn btn-outline-primary m-2" onclick="filterProjects('mobile')">Mobile Apps</button>
+					<button class="btn btn-outline-primary m-2"
+						onclick="filterProjects('animation')">Animations</button>
+				</div>
+			</div>
+
+			<!-- Projects Grid -->
+			<div class="row" id="projectsGrid">
+				<!-- WEB DESIGN PROJECTS -->
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
 					<div class="blog-entry justify-content-end">
-						<a href="#smart-finance-tracker" class="block-20 zoom-effect"
-							style="background-image: url('images/rectangle-1060.png');" data-toggle="modal"
-							data-target="#projectModal" onclick="showProjectDetails('smart-finance')">
-						</a>
+						<a href="https://www.figma.com/proto/ubvAyMcCP5hETHs9PkXn7l/Plant-Website?node-id=3-2&t=tSMQldEvUOK7YgMe-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1060.png');"
+							target="_blank"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="#plant-website" data-toggle="modal" data-target="#projectModal"
-									onclick="showProjectDetails('plant-website')">Plant
-									Website</a></h3>
-							<p>Responsive e-commerce website design for plant enthusiasts</p>
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/ubvAyMcCP5hETHs9PkXn7l/Plant-Website?node-id=3-2&t=tSMQldEvUOK7YgMe-1"
+									target="_blank">Plant Website</a></h3>
+							<p>E-commerce website for plant enthusiasts</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
 					<div class="blog-entry justify-content-end">
-						<a href="#ecommerce-platform" class="block-20 zoom-effect"
-							style="background-image: url('images/rectangle-1061.png');" data-toggle="modal"
-							data-target="#projectModal" onclick="showProjectDetails('ecommerce')">
-						</a>
+						<a href="https://www.figma.com/proto/JzM4SSgj5vQtRFJtvF8RJq/Flower?node-id=55-81&t=kjGbO9Fr0Yn0zOZ5-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1061.png');"
+							target="_blank"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="#self-nurture-app" data-toggle="modal"
-									data-target="#projectModal" onclick="showProjectDetails('self-nurture')">Self
-									Nurture
-									App</a></h3>
-							<p>Mental wellness mobile app with meditation and mindfulness features</p>
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/JzM4SSgj5vQtRFJtvF8RJq/Flower?node-id=55-81&t=kjGbO9Fr0Yn0zOZ5-1"
+									target="_blank">Flower Website</a></h3>
+							<p>Beautiful floral e-commerce platform</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a href="#microcontroller-projects" class="block-20 zoom-effect"
-							style="background-image: url('images/rectangle-1062.png');" data-toggle="modal"
-							data-target="#projectModal" onclick="showProjectDetails('microcontroller')">
-						</a>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/isLMxgMVFrAsT4SQTNg2Ec/Interior?node-id=1-2&t=lMVTRLVqeHuCZLbJ-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1062.png');"
+							target="_blank"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="#wedding-planner" data-toggle="modal"
-									data-target="#projectModal" onclick="showProjectDetails('wedding-planner')">Wedding
-									Event
-									Planner</a></h3>
-							<p>Comprehensive wedding planning platform with vendor management</p>
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/isLMxgMVFrAsT4SQTNg2Ec/Interior?node-id=1-2&t=lMVTRLVqeHuCZLbJ-1"
+									target="_blank">Interior Design</a></h3>
+							<p>Modern interior design showcase website</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/HLYwgzLRUfZmn7TLHrvh9a/Wedding-event-Planner-by-shivani?node-id=40-2&t=4gUbqPwiFm2xuMV8-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1063.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/HLYwgzLRUfZmn7TLHrvh9a/Wedding-event-Planner-by-shivani?node-id=40-2&t=4gUbqPwiFm2xuMV8-1"
+									target="_blank">Wedding Planner</a></h3>
+							<p>Elegant wedding event planning platform</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/OmLlrQWVFBlUIhdp6nR9k7/Hotel-Website?node-id=1-2&t=Q6JWmrMpcweDQBHv-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1064.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/OmLlrQWVFBlUIhdp6nR9k7/Hotel-Website?node-id=1-2&t=Q6JWmrMpcweDQBHv-1"
+									target="_blank">Hotel Website</a></h3>
+							<p>Luxury hotel booking platform</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/oRetScSjuH4xbItzVUiny2/Swaragh?node-id=2-2&t=fki9yFio6BagMIEX-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1060.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/oRetScSjuH4xbItzVUiny2/Swaragh?node-id=2-2&t=fki9yFio6BagMIEX-1"
+									target="_blank">Swaragh</a></h3>
+							<p>Cultural platform website design</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/rM8nSToGCmcZFT786xlXqM/SPOCLEARN?node-id=1-2&t=TPExvPvY9QSnPQ2w-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1061.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/rM8nSToGCmcZFT786xlXqM/SPOCLEARN?node-id=1-2&t=TPExvPvY9QSnPQ2w-1"
+									target="_blank">SPOCLEARN</a></h3>
+							<p>Educational learning platform</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="web">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/design/Eu4Nc6Hv5jCq7Rl3vi6uam/Pet-Care?t=wVNHmVwB3G46vYRL-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1062.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/design/Eu4Nc6Hv5jCq7Rl3vi6uam/Pet-Care?t=wVNHmVwB3G46vYRL-1"
+									target="_blank">Pet Care</a></h3>
+							<p>Pet care services website</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- MOBILE APP PROJECTS -->
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="mobile">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/wnvnbsGk6vmub6oDJgwIfo/self-nurture?node-id=492-52&t=YnbAvPFnuanysMgt-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1063.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/wnvnbsGk6vmub6oDJgwIfo/self-nurture?node-id=492-52&t=YnbAvPFnuanysMgt-1"
+									target="_blank">Self Nurture App</a></h3>
+							<p>Mental wellness & meditation app</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="mobile">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/kP0Lwq0r0wFSoVGzNbUlup/Art-Gallery?node-id=1-2&t=iaAwETaNeoV7hGQK-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1064.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/kP0Lwq0r0wFSoVGzNbUlup/Art-Gallery?node-id=1-2&t=iaAwETaNeoV7hGQK-1"
+									target="_blank">Art Gallery App</a></h3>
+							<p>Digital art gallery mobile application</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ANIMATION PROJECTS -->
+				<div class="col-md-4 d-flex ftco-animate project-item" data-category="animation">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.figma.com/proto/DEbnAKHpHruEqGcMxmSTcb/Hover-Animation?node-id=1-2&t=m5t5Q7FNmw32fFGD-1"
+							class="block-20 zoom-effect" style="background-image: url('images/rectangle-1060.png');"
+							target="_blank"></a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.figma.com/proto/DEbnAKHpHruEqGcMxmSTcb/Hover-Animation?node-id=1-2&t=m5t5Q7FNmw32fFGD-1"
+									target="_blank">Hover Animation</a></h3>
+							<p>Interactive hover effects showcase</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<br>
-			<!-- added justify-content-center to center align the last two projects -->
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="#web-development" class="block-20 zoom-effect"
-							style="background-image: url('images/rectangle-1063.png');" data-toggle="modal"
-							data-target="#projectModal" onclick="showProjectDetails('web')">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="#art-gallery-app" data-toggle="modal"
-									data-target="#projectModal" onclick="showProjectDetails('art-gallery')">Art Gallery
-									App</a></h3>
-							<p>Digital art gallery mobile app with interactive features</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="#ai-projects" class="block-20 zoom-effect"
-							style="background-image: url('images/rectangle-1064.png');" data-toggle="modal"
-							data-target="#projectModal" onclick="showProjectDetails('ai')">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="#spoclearn-platform" data-toggle="modal"
-									data-target="#projectModal" onclick="showProjectDetails('spoclearn')">SPOCLEARN
-									Platform</a></h3>
-							<p>Educational platform with interactive learning modules</p>
-						</div>
-					</div>
+
+			<!-- View More Button -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-12 text-center ftco-animate">
+					<p><a href="https://www.behance.net/shivanikn" class="btn btn-primary py-3 px-5"
+							target="_blank">View All Projects on Behance</a></p>
 				</div>
 			</div>
 		</div>
+
+		<script>
+			function filterProjects(category) {
+				const projects = document.querySelectorAll('.project-item');
+				const buttons = document.querySelectorAll('#project-section .btn');
+
+				// Update button styles
+				buttons.forEach(btn => {
+					btn.classList.remove('btn-primary');
+					btn.classList.add('btn-outline-primary');
+				});
+				event.target.classList.remove('btn-outline-primary');
+				event.target.classList.add('btn-primary');
+
+				// Filter projects
+				projects.forEach(project => {
+					if (category === 'all' || project.getAttribute('data-category') === category) {
+						project.style.display = 'flex';
+					} else {
+						project.style.display = 'none';
+					}
+				});
+			}
+		</script>
 	</section>
 
 	<!-- Project Details Modal -->
