@@ -526,11 +526,14 @@
 			<!-- Category Filter Buttons -->
 			<div class="row justify-content-center mb-4">
 				<div class="col-md-12 text-center">
-					<button class="btn btn-primary m-2" onclick="filterProjects('all')">All Projects</button>
-					<button class="btn btn-outline-primary m-2" onclick="filterProjects('web')">Web Design</button>
-					<button class="btn btn-outline-primary m-2" onclick="filterProjects('mobile')">Mobile Apps</button>
-					<button class="btn btn-outline-primary m-2"
-						onclick="filterProjects('animation')">Animations</button>
+					<button class="btn btn-primary m-2 filter-btn active" onclick="filterProjects('all', this)">All
+						Projects</button>
+					<button class="btn btn-primary btn-outline-primary m-2 filter-btn"
+						onclick="filterProjects('web', this)">Web Design</button>
+					<button class="btn btn-primary btn-outline-primary m-2 filter-btn"
+						onclick="filterProjects('mobile', this)">Mobile Apps</button>
+					<button class="btn btn-primary btn-outline-primary m-2 filter-btn"
+						onclick="filterProjects('animation', this)">Animations</button>
 				</div>
 			</div>
 
@@ -704,17 +707,21 @@
 		</div>
 
 		<script>
-			function filterProjects(category) {
+			function filterProjects(category, clickedButton) {
 				const projects = document.querySelectorAll('.project-item');
-				const buttons = document.querySelectorAll('#project-section .btn');
+				const buttons = document.querySelectorAll('.filter-btn');
 
-				// Update button styles
+				// Update button styles - add outline to all, remove from clicked
 				buttons.forEach(btn => {
-					btn.classList.remove('btn-primary');
-					btn.classList.add('btn-outline-primary');
+					if (!btn.classList.contains('btn-outline-primary')) {
+						btn.classList.add('btn-outline-primary');
+					}
 				});
-				event.target.classList.remove('btn-outline-primary');
-				event.target.classList.add('btn-primary');
+
+				// Remove outline from clicked button to make it filled
+				if (clickedButton) {
+					clickedButton.classList.remove('btn-outline-primary');
+				}
 
 				// Filter projects
 				projects.forEach(project => {
