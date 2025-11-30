@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Self Nurture Case Study - Shivani K.N Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500;700&family=Alegreya+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/nithinvs32/resume/main/portfolio-logo.png"
+        type="image/png">
+
+    <style>
+        /* Enhanced Case Study Styles */
+        body {
+            background: #000;
+            color: #fff;
+        }
+
+        .case-study-hero {
+            position: relative;
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #2a2a2a 100%);
+            overflow: hidden;
+        }
+
+        .case-study-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,189,57,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .case-study-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 189, 57, 0.15);
+            border: 2px solid #ffbd39;
+            border-radius: 50px;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 14px;
+            color: #ffbd39;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .case-study-hero h1 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-study-hero .subtitle {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-item {
+            text-align: center;
+        }
+
+        .hero-meta-item .label {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .hero-meta-item .value {
+            font-family: 'Alegreya SC', serif;
+            font-size: 18px;
+            color: #ffbd39;
+            font-weight: 700;
+        }
+
+        /* Navigation Pills */
+        .case-nav {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 70px;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 189, 57, 0.2);
+        }
+
+        .case-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .case-nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 189, 57, 0.3);
+            border-radius: 25px;
+            color: #fff;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .case-nav ul li a:hover,
+        .case-nav ul li a.active {
+            background: #ffbd39;
+            color: #000;
+            border-color: #ffbd39;
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        .case-section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .case-section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-number {
+            font-family: 'Alegreya SC', serif;
+            font-size: 14px;
+            color: #ffbd39;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ffbd39, transparent);
+        }
+
+        .section-description {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.8;
+        }
+
+        /* Content Cards */
+        .content-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffbd39, #ff9500);
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 189, 57, 0.2);
+            border-color: rgba(255, 189, 57, 0.5);
+        }
+
+        .content-card h3 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 28px;
+            color: #ffbd39;
+            margin-bottom: 20px;
+        }
+
+        .content-card p {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        /* Empathy Grid */
+        .empathy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .empathy-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .empathy-card:hover {
+            border-color: #ffbd39;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 189, 57, 0.15);
+        }
+
+        .empathy-card h4 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 24px;
+            color: #ffbd39;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .empathy-card h4::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 189, 57, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .empathy-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .empathy-card ul li {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .empathy-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .empathy-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffbd39;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Persona Card */
+        .persona-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 2px solid rgba(255, 189, 57, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .persona-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 150px;
+            color: rgba(255, 189, 57, 0.1);
+            font-family: Georgia, serif;
+        }
+
+        .persona-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .persona-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ffbd39, #ff9500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Alegreya SC', serif;
+            font-size: 40px;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .persona-info h3 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .persona-meta {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 14px;
+            color: #ffbd39;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .persona-meta span {
+            padding: 5px 15px;
+            background: rgba(255, 189, 57, 0.2);
+            border-radius: 15px;
+        }
+
+        .persona-quote {
+            font-family: 'Alegreya Sans', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #fff;
+            border-left: 4px solid #ffbd39;
+            padding-left: 25px;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .persona-section {
+            margin: 25px 0;
+        }
+
+        .persona-section h4 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 20px;
+            color: #ffbd39;
+            margin-bottom: 15px;
+        }
+
+        /* Color Palette */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .color-swatch {
+            height: 180px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-swatch::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .color-swatch .color-info {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .color-swatch .color-name {
+            font-family: 'Alegreya SC', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .color-swatch .color-code {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Typography Showcase */
+        .typography-showcase {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .font-family-section {
+            margin: 30px 0;
+        }
+
+        .font-family-title {
+            font-family: 'Alegreya SC', serif;
+            font-size: 28px;
+            color: #ffbd39;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 189, 57, 0.3);
+        }
+
+        .font-sample {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .font-sample .label {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* List Styles */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .styled-list li {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        .styled-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffbd39;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            background: transparent;
+            border: 2px solid #ffbd39;
+            color: #ffbd39;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ffbd39;
+            color: #000;
+            text-decoration: none;
+            transform: translateX(-5px);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 20px;
+        }
+
+        /* Thank You Section */
+        .thank-you-section {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,189,57,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+        }
+
+        .thank-you-section h2 {
+            font-family: 'Alegreya SC', serif;
+            font-size: 64px;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .thank-you-section p {
+            font-family: 'Alegreya Sans', sans-serif;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 36px;
+            }
+
+            .case-study-hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-meta {
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .two-column,
+            .empathy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .color-palette {
+                grid-template-columns: 1fr;
+            }
+
+            .persona-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-card {
+                padding: 25px;
+            }
+
+            .case-nav ul {
+                gap: 8px;
+            }
+
+            .case-nav ul li a {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            .thank-you-section h2 {
+                font-size: 42px;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Shivani K.N</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+                data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#project-section" class="nav-link"><span>Projects</span></a>
+                    </li>
+                    <li class="nav-item"><a href="case-study.html" class="nav-link"><span>Case Study</span></a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="case-study-hero">
+        <div class="container">
+            <div class="text-center">
+                <span class="hero-badge">UX Case Study</span>
+                <h1>Self Nurture</h1>
+                <p class="subtitle">A mental health app designed to help you navigate stress, anxiety, depression,
+                    burnout, and loneliness in a way that feels natural and supportive</p>
+
+                <div class="hero-meta">
+                    <div class="hero-meta-item">
+                        <div class="label">Role</div>
+                        <div class="value">UI/UX Designer</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="label">Duration</div>
+                        <div class="value">3 Months</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="label">Platform</div>
+                        <div class="value">Mobile App</div>
+                    </div>
+                    <div class="hero-meta-item">
+                        <div class="label">Tools</div>
+                        <div class="value">Figma, Adobe XD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Pills -->
+    <div class="case-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#empathy">Empathy</a></li>
+                <li><a href="#persona">Persona</a></li>
+                <li><a href="#style">Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section class="case-section" id="overview">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">01</div>
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-description">Understanding the vision behind Self Nurture and its mission to make
+                    mental health support accessible to everyone</p>
+            </div>
+
+            <div class="content-card fade-in">
+                <h3>What is Self Nurture?</h3>
+                <p>Self-nurture refers to the practices, habits, and activities that individuals engage in to care for
+                    their emotional, mental, and sometimes physical well-being.</p>
+                <p>Life can be overwhelming, and we all need support sometimes. That's why we created Self Nurture— a
+                    mental health app designed to help you navigate stress, anxiety, depression, burnout, and loneliness
+                    in a way that feels natural and supportive.</p>
+            </div>
+
+            <div class="content-card fade-in">
+                <h3>Our Mission</h3>
+                <p>We believe mental well-being should be accessible to everyone, so we've made it easy for you to track
+                    your mood, explore guided exercises, and connect with a like-minded community—all at your own pace.
+                </p>
+                <p>Whether you're looking for simple self-care tips or deeper emotional support, Self Nurture is here to
+                    remind you that you're not alone. Your mental health matters, and we're here to help you take care
+                    of it, one step at a time.</p>
+            </div>
+
+            <div class="content-card fade-in">
+                <h3>Holistic Approach</h3>
+                <p>The app offers a holistic approach by integrating self-care tools and professional resources, while
+                    emphasizing inclusivity for underserved groups like transgender individuals. By utilizing insights
+                    from user surveys, the app delivers personalized recommendations, empowering users to manage stress,
+                    anxiety, depression, sleep issues, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="case-section" id="problem">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Problem & Solution</h2>
+                <p class="section-description">Identifying the challenges and crafting meaningful solutions</p>
+            </div>
+
+            <div class="two-column">
+                <div class="content-card fade-in" style="border-left-color: #dc3545;">
+                    <h3 style="color: #dc3545;">Problem Statement</h3>
+                    <p>Mental health issues are increasingly prevalent, yet individuals face significant barriers such
+                        as:</p>
+                    <ul class="styled-list">
+                        <li>Limited accessibility to mental health resources</li>
+                        <li>Social stigma around seeking help</li>
+                        <li>Lack of personalized care options</li>
+                        <li>Gaps in support for diverse demographics</li>
+                        <li>Difficulty connecting fitness and mental health</li>
+                    </ul>
+                    <p>Existing mental health solutions often fail to address the specific needs of diverse
+                        demographics, leaving gaps in support, particularly for underserved groups like transgender
+                        individuals.</p>
+                </div>
+
+                <div class="content-card fade-in" style="border-left-color: #28a745;">
+                    <h3 style="color: #28a745;">Solution Statement</h3>
+                    <p>The app offers a holistic approach by:</p>
+                    <ul class="styled-list">
+                        <li>Integrating self-care tools and professional resources</li>
+                        <li>Emphasizing inclusivity for underserved groups</li>
+                        <li>Delivering personalized recommendations through user surveys</li>
+                        <li>Empowering users to manage stress, anxiety, and depression</li>
+                        <li>Providing sleep tracking and improvement tips</li>
+                        <li>Connecting users with mental health professionals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="case-section" id="research">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">03</div>
+                <h2 class="section-title">Research</h2>
+                <p class="section-description">Deep dive into user needs and market analysis</p>
+            </div>
+
+            <div class="content-card fade-in">
+                <h3>Research Objectives</h3>
+                <ul class="styled-list">
+                    <li><strong>Understand User Needs:</strong> Identify prevalent mental health issues and coping
+                        strategies among users</li>
+                    <li><strong>User Interaction:</strong> Examine how users interact with mental health resources and
+                        their expectations from a digital app</li>
+                    <li><strong>Feature Validation:</strong> Confirm that app features meet genuine user needs through
+                        data insights</li>
+                    <li><strong>Competitive Analysis:</strong> Assess current mental health apps to uncover unmet needs
+                        and improvement areas</li>
+                </ul>
+            </div>
+
+            <div class="two-column">
+                <div class="content-card fade-in">
+                    <h3>Scope of Work</h3>
+                    <ul class="styled-list">
+                        <li>UI/UX Research</li>
+                        <li>User Testing</li>
+                        <li>User Interviews</li>
+                        <li>Business Analysis</li>
+                        <li>Competitor Analysis</li>
+                        <li>User Stories & User Flow</li>
+                        <li>Moodboard & Concept</li>
+                        <li>A/B Testing</li>
+                        <li>Style Guide & App Interface</li>
+                        <li>Final Design</li>
+                    </ul>
+                </div>
+
+                <div class="content-card fade-in">
+                    <h3>Research Questions</h3>
+                    <ul class="styled-list">
+                        <li>What are the thoughts and actions of people experiencing depression?</li>
+                        <li>What are the primary user needs?</li>
+                        <li>What pain points are users facing?</li>
+                        <li>How are users currently overcoming difficulties?</li>
+                    </ul>
+
+                    <h3 style="margin-top: 30px;">Interview Questions</h3>
+                    <ul class="styled-list">
+                        <li>What's your mood lately? How long has this been going on?</li>
+                        <li>What makes your mood change?</li>
+                        <li>When you feel stressed, what do you usually do?</li>
+                        <li>What do you think will make you better?</li>
+                        <li>Have you ever been to a psychiatrist?</li>
+                        <li>Do you think you need outside support?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empathy Mapping Section -->
+    <section class="case-section" id="empathy">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">04</div>
+                <h2 class="section-title">Empathy Mapping</h2>
+                <p class="section-description">Understanding our users' thoughts, feelings, and behaviors</p>
+            </div>
+
+            <div class="empathy-grid">
+                <div class="empathy-card fade-in">
+                    <h4>💬 Say</h4>
+                    <ul>
+                        <li>Goal setting and tracking</li>
+                        <li>Self-assessment tools</li>
+                        <li>Guided meditation and mindfulness sessions</li>
+                        <li>Daily mood tracker</li>
+                        <li>Exercise and fitness suggestions</li>
+                        <li>Sleep tracking and tips</li>
+                        <li>Chat support with mental health professionals</li>
+                        <li>Access to virtual support groups</li>
+                    </ul>
+                </div>
+
+                <div class="empathy-card fade-in">
+                    <h4>🎯 Does</h4>
+                    <ul>
+                        <li>Talking to friends/family</li>
+                        <li>Engaging in hobbies</li>
+                        <li>Exercise or physical activity</li>
+                        <li>Listening to music or podcasts for relaxation</li>
+                        <li>Spending time in nature or taking walks</li>
+                        <li>Seeking professional help (therapy or counseling)</li>
+                        <li>Meditation or mindfulness practices</li>
+                    </ul>
+                </div>
+
+                <div class="empathy-card fade-in">
+                    <h4>😔 Feel</h4>
+                    <ul>
+                        <li>Stress</li>
+                        <li>Anxiety</li>
+                        <li>Sleep problems</li>
+                        <li>Loneliness</li>
+                        <li>Panic attacks</li>
+                        <li>Overwhelmed</li>
+                        <li>Unmotivated</li>
+                    </ul>
+                </div>
+
+                <div class="empathy-card fade-in">
+                    <h4>💭 Think</h4>
+                    <ul>
+                        <li>"Why do I feel so overwhelmed? Am I the only one struggling like this?"</li>
+                        <li>"If I could just get a full night's sleep, maybe things would feel better"</li>
+                        <li>"Does anyone understand what I'm going through?"</li>
+                        <li>"Is there something wrong with me? Will this feeling ever go away?"</li>
+                        <li>"How do I navigate this world and feel accepted?"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card fade-in" style="margin-top: 40px;">
+                <h3>User Flow</h3>
+                <p><strong>Installation from app store → Splash Screen → Onboarding → Sign in → Sign up → Questions →
+                        Home → Sleep → Sleep Quality Tracker → Anxiety → Favourite → Profile Settings → App Settings →
+                        Expression Analysis → Sleep Meditations → Music → Mood Tracker → For Beginners → Mental health
+                        Assessments → Stress → Details of Doctor → LGBTQIA+ Meditations → Map → Take a mindful break →
+                        Schedule Page → Categories → Doctor Specialist → Near by Doctor → Setting → Profile →
+                        Subscription → Meditate → Doctor → Expert</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Persona Section -->
+    <section class="case-section" id="persona">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">05</div>
+                <h2 class="section-title">User Persona</h2>
+                <p class="section-description">Meet Aisha - our primary user persona</p>
+            </div>
+
+            <div class="persona-card fade-in">
+                <div class="persona-header">
+                    <div class="persona-avatar">AK</div>
+                    <div class="persona-info">
+                        <h3>Aisha Kapoor</h3>
+                        <div class="persona-meta">
+                            <span>Age: 27</span>
+                            <span>Marketing Executive</span>
+                            <span>Mumbai, India</span>
+                            <span>Single</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="persona-quote">"I want to take control of my mental well-being and find effective strategies
+                    to navigate the challenges"</p>
+
+                <div class="persona-section">
+                    <h4>📖 User Story</h4>
+                    <p
+                        style="font-family: 'Alegreya Sans', sans-serif; color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
+                        Aisha works in a high-pressure corporate job with tight deadlines. She often experiences stress,
+                        anxiety, and trouble sleeping due to long working hours and excessive screen time. She wants an
+                        easy way to de-stress and improve her mental well-being.</p>
+                </div>
+
+                <div class="two-column" style="margin-top: 30px;">
+                    <div class="persona-section">
+                        <h4>😟 Current Feelings</h4>
+                        <ul class="styled-list">
+                            <li>Overwhelmed by work pressure</li>
+                            <li>Struggling with sleep issues</li>
+                            <li>Feels unmotivated and mentally drained</li>
+                        </ul>
+                    </div>
+
+                    <div class="persona-section">
+                        <h4>🎯 Goals</h4>
+                        <ul class="styled-list">
+                            <li>Reduce work-related stress and anxiety</li>
+                            <li>Improve sleep quality</li>
+                            <li>Find a work-life balance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="persona-section" style="margin-top: 20px;">
+                    <h4>❌ Pain Points</h4>
+                    <ul class="styled-list">
+                        <li>No time for therapy or mental health breaks</li>
+                        <li>Struggles to find reliable self-care resources</li>
+                        <li>Feels guilty about taking time off for herself</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Guide Section -->
+    <section class="case-section" id="style">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">06</div>
+                <h2 class="section-title">Style Guide</h2>
+                <p class="section-description">The visual language of Self Nurture</p>
+            </div>
+
+            <div class="content-card fade-in">
+                <h3>Colour Palette</h3>
+                <p>Our color palette reflects nature, growth, and tranquility - essential elements for mental wellness
+                </p>
+
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: #054E16;">
+                        <div class="color-info">
+                            <div class="color-name" style="color: #fff;">Primary</div>
+                            <div class="color-code" style="color: #fff;">#054E16</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch" style="background-color: #FEFBE5;">
+                        <div class="color-info">
+                            <div class="color-name" style="color: #054E16;">Secondary</div>
+                            <div class="color-code" style="color: #054E16;">#FEFBE5</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch" style="background-color: #4E6C50;">
+                        <div class="color-info">
+                            <div class="color-name" style="color: #fff;">Tertiary</div>
+                            <div class="color-code" style="color: #fff;">#4E6C50</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch" style="background-color: #493628;">
+                        <div class="color-info">
+                            <div class="color-name" style="color: #fff;">Dark</div>
+                            <div class="color-code" style="color: #fff;">#493628</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typography-showcase fade-in">
+                <h3 style="font-family: 'Alegreya SC', serif; font-size: 28px; color: #ffbd39; margin-bottom: 30px;">
+                    Typography</h3>
+
+                <div class="font-family-section">
+                    <div class="font-family-title">Alegreya SC</div>
+                    <p
+                        style="font-family: 'Alegreya Sans', sans-serif; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        Bold and attention-grabbing fonts for headings to create hierarchy and attract user attention
+                    </p>
+
+                    <div class="font-sample">
+                        <div class="label">Bold - Heading: 30px</div>
+                        <div style="font-family: 'Alegreya SC', serif; font-size: 30px; font-weight: 700; color: #fff;">
+                            The Quick Brown Fox Jumps</div>
+                    </div>
+                    <div class="font-sample">
+                        <div class="label">Bold - Sub heading: 24px</div>
+                        <div style="font-family: 'Alegreya SC', serif; font-size: 24px; font-weight: 700; color: #fff;">
+                            The Quick Brown Fox Jumps</div>
+                    </div>
+                    <div class="font-sample">
+                        <div class="label">Regular - Description: 16px</div>
+                        <div style="font-family: 'Alegreya SC', serif; font-size: 16px; font-weight: 400; color: #fff;">
+                            The quick brown fox jumps over the lazy dog</div>
+                    </div>
+                </div>
+
+                <div class="font-family-section">
+                    <div class="font-family-title">Alegreya Sans</div>
+                    <p
+                        style="font-family: 'Alegreya Sans', sans-serif; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                        Clean and readable fonts for body text to enhance readability and user experience</p>
+
+                    <div class="font-sample">
+                        <div class="label">Bold - Heading: 24px</div>
+                        <div
+                            style="font-family: 'Alegreya Sans', sans-serif; font-size: 24px; font-weight: 700; color: #fff;">
+                            The Quick Brown Fox Jumps</div>
+                    </div>
+                    <div class="font-sample">
+                        <div class="label">Medium - Sub heading: 20px</div>
+                        <div
+                            style="font-family: 'Alegreya Sans', sans-serif; font-size: 20px; font-weight: 500; color: #fff;">
+                            The Quick Brown Fox Jumps</div>
+                    </div>
+                    <div class="font-sample">
+                        <div class="label">Regular - Description: 12px</div>
+                        <div
+                            style="font-family: 'Alegreya Sans', sans-serif; font-size: 12px; font-weight: 400; color: #fff;">
+                            The quick brown fox jumps over the lazy dog</div>
+                    </div>
+                    <div class="font-sample">
+                        <div class="label">Font Weights & Characters</div>
+                        <div style="font-family: 'Alegreya Sans', sans-serif; font-size: 14px; color: #fff;">
+                            <span style="font-weight: 300;">abcdefghijklmnopqrstuvwxyz (Light)</span><br>
+                            <span style="font-weight: 400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ (Regular)</span><br>
+                            <span style="font-weight: 500;">1234567890 (Medium)</span><br>
+                            <span style="font-weight: 700;">!@#$%^&*() (Bold)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <h2>THANK YOU</h2>
+            <p>For exploring the Self Nurture case study</p>
+            <a href="projects.html" class="back-button">Back to Projects</a>
+        </div>
+    </section>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('.case-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Update active state
+                    document.querySelectorAll('.case-nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.case-section');
+            const navLinks = document.querySelectorAll('.case-nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

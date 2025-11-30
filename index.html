@@ -194,6 +194,45 @@
 				margin-bottom: 20px;
 			}
 		}
+
+		/* Filter button styling - make all buttons have yellow text */
+		.filter-btn.btn-primary {
+			border: 2px solid #ffbd39 !important;
+			background: transparent !important;
+			color: #ffbd39 !important;
+		}
+
+		.filter-btn.btn-primary:hover {
+			border: 2px solid #ffbd39 !important;
+			background: #ffbd39 !important;
+			color: #fff !important;
+		}
+
+		/* Active filter button (when clicked/selected) */
+		.filter-btn.btn-primary:not(.btn-outline-primary) {
+			border: 2px solid #ffbd39 !important;
+			background: transparent !important;
+			color: #ffbd39 !important;
+		}
+
+		.filter-btn.btn-primary:not(.btn-outline-primary):hover {
+			border: 2px solid #ffbd39 !important;
+			background: #ffbd39 !important;
+			color: #fff !important;
+		}
+
+		/* Project filtering styles */
+		.project-item {
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+		}
+
+		.project-item[style*="display: none"] {
+			display: none !important;
+		}
+
+		.project-item[style*="display: flex"] {
+			display: flex !important;
+		}
 	</style>
 
 
@@ -214,9 +253,12 @@
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a>
+					</li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+					<li class="nav-item"><a href="case-study.html" class="nav-link"><span>Case Study</span></a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -732,16 +774,19 @@
 			<!-- View More Button -->
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-12 text-center ftco-animate">
-					<p><a href="https://www.behance.net/shivanikn" class="btn btn-primary py-3 px-5"
-							target="_blank">View All Projects on Behance</a></p>
+					<p><a href="projects.html" class="btn btn-primary py-3 px-5">View More Projects</a></p>
 				</div>
 			</div>
 		</div>
 
 		<script>
 			function filterProjects(category, clickedButton) {
+				console.log('Filtering projects by category:', category);
+
 				const projects = document.querySelectorAll('.project-item');
 				const buttons = document.querySelectorAll('.filter-btn');
+
+				console.log('Total projects found:', projects.length);
 
 				// Update button styles - add outline to all, remove from clicked
 				buttons.forEach(btn => {
@@ -755,14 +800,26 @@
 					clickedButton.classList.remove('btn-outline-primary');
 				}
 
-				// Filter projects
+				// Filter projects with better display control
+				let visibleCount = 0;
 				projects.forEach(project => {
-					if (category === 'all' || project.getAttribute('data-category') === category) {
+					const projectCategory = project.getAttribute('data-category');
+
+					if (category === 'all' || projectCategory === category) {
+						// Show the project
 						project.style.display = 'flex';
+						project.style.visibility = 'visible';
+						project.style.opacity = '1';
+						visibleCount++;
 					} else {
+						// Hide the project
 						project.style.display = 'none';
+						project.style.visibility = 'hidden';
+						project.style.opacity = '0';
 					}
 				});
+
+				console.log('Visible projects:', visibleCount);
 			}
 		</script>
 	</section>
