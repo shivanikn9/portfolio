@@ -39,24 +39,39 @@
             display: flex !important;
         }
 
-        /* Filter button styling */
-        .filter-btn.btn-primary {
-            border: 2px solid #ffbd39 !important;
-            background: transparent !important;
+        /* Button styling - Enforce Yellow/Black Theme */
+        .btn-primary,
+        .btn-outline-primary {
+            border-color: #ffbd39 !important;
             color: #ffbd39 !important;
         }
 
-        .filter-btn.btn-primary:hover {
-            border: 2px solid #ffbd39 !important;
+        .btn-primary {
             background: #ffbd39 !important;
             color: #fff !important;
         }
 
-        /* Active filter button */
-        .filter-btn.btn-primary:not(.btn-outline-primary) {
-            border: 2px solid #ffbd39 !important;
+        .btn-outline-primary {
+            background: transparent !important;
+        }
+
+        .btn-primary:hover,
+        .btn-outline-primary:hover,
+        .btn-primary:focus,
+        .btn-outline-primary:focus,
+        .btn-primary:active,
+        .btn-outline-primary:active {
             background: #ffbd39 !important;
+            border-color: #ffbd39 !important;
             color: #fff !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Filter button specific overrides if needed */
+        .filter-btn {
+            margin: 5px;
+            border-radius: 30px;
         }
 
         /* project image zoom effect */
@@ -140,6 +155,22 @@
             </div>
 
 
+
+            <!-- Filter Buttons -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary filter-btn mr-2" onclick="filterProjects('all', this)">All
+                            Projects</button>
+                        <button class="btn btn-outline-primary filter-btn mr-2"
+                            onclick="filterProjects('web', this)">Web Design</button>
+                        <button class="btn btn-outline-primary filter-btn mr-2"
+                            onclick="filterProjects('mobile', this)">Mobile Apps</button>
+                        <button class="btn btn-outline-primary filter-btn"
+                            onclick="filterProjects('animation', this)">Animations</button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Projects Grid -->
             <div class="row" id="projectsGrid">
@@ -298,51 +329,87 @@
                 </div>
             </div>
 
+            <!-- See More Button -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-12 text-center">
+                    <button id="seeMoreBtn" class="btn btn-primary py-3 px-5" onclick="toggleProjects()">See
+                        More</button>
+                </div>
+            </div>
 
         </div>
 
         <script>
-            function filterProjects(category, clickedButton) {
-                console.log('Filtering projects by category:', category);
+            let currentCategory = 'all';
+            let isExpanded = false;
+            const INITIAL_LIMIT = 6;
 
+            function updateVisibility() {
                 const projects = document.querySelectorAll('.project-item');
-                const buttons = document.querySelectorAll('.filter-btn');
-
-                console.log('Total projects found:', projects.length);
-
-                // Update button styles - add outline to all, remove from clicked
-                buttons.forEach(btn => {
-                    if (!btn.classList.contains('btn-outline-primary')) {
-                        btn.classList.add('btn-outline-primary');
-                    }
-                });
-
-                // Remove outline from clicked button to make it filled
-                if (clickedButton) {
-                    clickedButton.classList.remove('btn-outline-primary');
-                }
-
-                // Filter projects with better display control
                 let visibleCount = 0;
+                let totalInCategory = 0;
+
                 projects.forEach(project => {
                     const projectCategory = project.getAttribute('data-category');
+                    const matchesCategory = currentCategory === 'all' || projectCategory === currentCategory;
 
-                    if (category === 'all' || projectCategory === category) {
-                        // Show the project
-                        project.style.display = 'flex';
-                        project.style.visibility = 'visible';
-                        project.style.opacity = '1';
+                    if (matchesCategory) {
+                        totalInCategory++;
+                        // If expanded, show all matching. If not, show only up to limit
+                        if (isExpanded || visibleCount < INITIAL_LIMIT) {
+                            project.style.display = 'flex';
+                            project.style.visibility = 'visible';
+                            project.style.opacity = '1';
+                        } else {
+                            project.style.display = 'none';
+                            project.style.visibility = 'hidden';
+                            project.style.opacity = '0';
+                        }
                         visibleCount++;
                     } else {
-                        // Hide the project
                         project.style.display = 'none';
                         project.style.visibility = 'hidden';
                         project.style.opacity = '0';
                     }
                 });
 
-                console.log('Visible projects:', visibleCount);
+                // Update button state
+                const btn = document.getElementById('seeMoreBtn');
+                if (totalInCategory <= INITIAL_LIMIT) {
+                    btn.style.display = 'none';
+                } else {
+                    btn.style.display = 'inline-block';
+                    btn.innerText = isExpanded ? 'See Less' : 'See More';
+                }
             }
+
+            function filterProjects(category, clickedButton) {
+                currentCategory = category;
+                isExpanded = false; // Reset expansion when changing filter
+
+                // Update button styles
+                const buttons = document.querySelectorAll('.filter-btn');
+                buttons.forEach(btn => {
+                    if (!btn.classList.contains('btn-outline-primary')) {
+                        btn.classList.add('btn-outline-primary');
+                    }
+                });
+                if (clickedButton) {
+                    clickedButton.classList.remove('btn-outline-primary');
+                }
+
+                updateVisibility();
+            }
+
+            function toggleProjects() {
+                isExpanded = !isExpanded;
+                updateVisibility();
+            }
+
+            // Initialize
+            document.addEventListener('DOMContentLoaded', () => {
+                updateVisibility();
+            });
         </script>
     </section>
 
