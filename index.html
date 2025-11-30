@@ -271,7 +271,7 @@
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
 						data-scrollax-parent="true">
 						<div class="one-third js-fullheight order-md-last img"
-							style="background-image:url(images/bg_1.png);">
+							style="background-image:url(images/bg_1.jpg);">
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex  align-items-center ftco-animate"
@@ -283,44 +283,7 @@
 								<!-- Element to contain animated typing -->
 								<span id="typing-animation"></span>
 
-								<script>
 
-									// Initialize the typing animation
-									const typingAnimationElement = document.getElementById('typing-animation');
-
-									// Create an array of typing text
-									const typingTexts = [
-										'UI/UX Designer',
-										'Graphic Designer',
-										'Web Designer',
-										'User Experience Specialist',
-										'Visual Designer',
-										'Creative Problem Solver',
-										'Design Systems Expert'
-									];
-
-
-
-									// Create a function to display the typing animation for a given text
-									function playTypingAnimation(text) {
-										// Loop through each character and add it to the element
-										for (let i = 0; i < text.length; i++) {
-											setTimeout(() => {
-												typingAnimationElement.textContent += text[i];
-											}, i * 200); // Increase the delay to slow down the typing animation
-										}
-
-										// Once the animation is complete, reset the text and start over
-										setTimeout(() => {
-											typingAnimationElement.textContent = '';
-											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-										}, text.length * 200);
-									}
-
-									// Start the typing animation loop
-									playTypingAnimation(typingTexts[0]);
-
-								</script>
 
 								<br>
 								<br>
@@ -1099,6 +1062,46 @@
 
 	<script src="js/main.js"></script>
 
+	<script>
+		// Initialize the typing animation
+		var typingAnimationElement = document.getElementById('typing-animation');
+
+		// Create an array of typing text
+		var typingTexts = [
+			'UI/UX Designer',
+			'Graphic Designer',
+			'Web Designer',
+			'User Experience Specialist',
+			'Visual Designer',
+			'Creative Problem Solver',
+			'Design Systems Expert'
+		];
+
+		// Create a function to display the typing animation for a given text
+		function playTypingAnimation(text) {
+			// Loop through each character and add it to the element
+			for (var i = 0; i < text.length; i++) {
+				setTimeout(function (char) {
+					return function () {
+						if (typingAnimationElement) typingAnimationElement.textContent += char;
+					};
+				}(text[i]), i * 200);
+			}
+
+			// Once the animation is complete, reset the text and start over
+			setTimeout(function () {
+				if (typingAnimationElement) {
+					typingAnimationElement.textContent = '';
+					playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+				}
+			}, text.length * 200);
+		}
+
+		// Start the typing animation loop
+		if (typingAnimationElement) {
+			playTypingAnimation(typingTexts[0]);
+		}
+	</script>
 </body>
 
 </html>
